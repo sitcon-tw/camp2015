@@ -1,0 +1,57 @@
+
+#paywayPage{
+
+	background-color: $smokeWhite;
+	color: $lightBlack;
+	font-family: $gothic;
+
+	h2{
+		@include fontTitle();
+		text-align: center;
+		margin-bottom: .5em;
+	}
+
+	a{
+		color: $darkBlue;
+		cursor: pointer;
+	}
+
+	.paywayArticle{
+
+		@include fontArticle();
+		line-height: 1.2em;
+
+		p{
+			padding-top: .5em;
+		}
+		span{
+			display: inline-block;
+			&.left{
+				width: 49%;
+				vertical-align: middle;
+				text-align: right;
+				margin-right: 1%;
+			}
+			&.right{
+				width: 49%;
+				vertical-align: top;
+				text-align: left;
+			}
+
+			&.quo{
+				font-size: .9em;
+				display: block;
+				padding-left: 5px;
+				margin-left: 2em;
+				border-left: 5px #aaa solid;
+			}
+		}
+		ol{
+			padding-left: 3em;
+			li{
+				margin-top: .3em;
+			}
+		}
+	}
+
+}

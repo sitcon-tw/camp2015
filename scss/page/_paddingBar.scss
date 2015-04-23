@@ -1,0 +1,24 @@
+
+.paddingBar{
+	position: relative;
+	width: 100%;
+	height: 0px;
+
+	.paddingBlock{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 999;
+		width: 100%;
+		height: 200px;
+		@include lean();
+	}
+	.red{
+		background-color: $darkRed;
+		color: white;
+	}
+	.blue{
+		background-color: $darkBlue;
+		color: white;
+	}
+}

@@ -1,0 +1,58 @@
+
+$colNum: 5;
+
+#enrollPage{
+
+	background-color: $darkBlack;
+	color: #aaa;
+	font-family: $gothic;
+
+	h2{
+		@include fontTitle();
+		text-align: center;
+		margin-bottom: .5em;
+	}
+	.row{
+		display: block;
+		width: 100%;
+
+		.col{
+			display: inline-block;
+			margin: 0;
+			padding: 0;
+			width: 100% / $colNum - 0.5%;
+			text-align: center;
+		}
+	}
+
+	.pageContainer{
+		width: 80%;/*
+		background-position: 90% -50%;
+		background-attachment: fixed;
+		background-size: 800px auto;
+		background-repeat: no-repeat;
+		background-image: url('img/girl.png');*/
+
+		.left{
+			width: 80%;
+		}
+		img{
+			position: absolute;
+			top: 55%;
+			right: 0%;
+			transform-style: preserve-3d;
+			transform: translate(-0%, -50%);
+			width: 200px;
+		}
+
+		@media screen and (max-width: 800px){
+			width: 60%;
+			& .left{
+				width: 100%;
+			}
+			& img{
+				display: none;
+			}
+		}
+	}
+}

@@ -1,0 +1,45 @@
+$lightBlue: #57b3d8;
+$darkBlue: #185281;
+$lightBlack: #333;
+$darkBlack: #131313;
+$lightRed: #FFB1B1;
+$darkRed: #af322e;
+$smokeWhite: #eee;
+
+$gothic: "Lato", sans-serif,"WenQuanYi Zen Hei","Microsoft JhengHei","Heiti TC";
+$gamble: Arial, "新細明體";
+
+@mixin fontTitle(){
+	font-size: 48px;
+	font-weight: 400;
+}
+@mixin fontSubtitle(){
+	font-size: 36px;
+	font-weight: 400;
+}
+@mixin fontSmalltitle(){
+	font-size: 24px;
+	font-weight: 400;
+}
+@mixin fontArticle(){
+	font-size: 18px;
+	line-height: 1.6em;
+}
+@mixin fontExplain(){
+	font-size: 14px;
+	line-height: 1.3em;
+	color: gray;
+}
+
+@mixin middleCenter(){
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform-style: preserve-3d;
+	transform: translate(-50%, -50%);
+}
+
+@mixin lean( $degree:-5deg ){
+	transform-origin: left top;
+	transform: skewY($degree);
+}

@@ -1,0 +1,61 @@
+
+#coursePage{
+
+	background-color: $smokeWhite;
+	color: $lightBlack;
+	font-family: $gothic;
+
+	.pageContainer{
+		max-width: none;
+		min-width: 700px;
+		@media screen and (max-width: 700px){
+			min-width: 0px;
+			width: 100%;
+		}
+	}
+
+	h2{
+		@include fontTitle();
+		text-align: center;
+		margin-bottom: .5em;
+	}
+
+	table{
+		border-spacing: 0px;
+		border: 0px;
+	}
+
+	tr{
+
+		font-size: 16px;
+		td{
+			background-color: $lightBlack;
+			color: $smokeWhite;
+			padding-left: 1em;
+			padding-right: 1em;
+			text-align: center;
+			vertical-align: middle;
+			border: 1px $smokeWhite solid;
+
+			&.course{
+				color: $lightRed;
+				cursor: pointer;
+			}
+			&.easy{
+				background-color: #ddd;
+				color: $lightBlack;
+			}
+		}
+		p{
+			margin-top: .3em;
+		}
+
+
+		&:not(:first-child){
+			td{
+				padding-top: .5em;
+				padding-bottom: .5em;
+			}
+		}
+	}
+}

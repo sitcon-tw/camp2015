@@ -1,0 +1,63 @@
+
+#aboutPage{
+
+	background-color: $smokeWhite;
+	color: $lightBlack;
+	font-family: $gothic;
+
+	position: relative;
+	overflow: hidden;
+
+	.pageContainer{
+		position: relative;
+		max-width: none;
+		padding-top: 8em;
+		@media screen and (max-width:1200px){
+			width: 80%;
+		}
+	}
+	p{
+		@include fontArticle();
+	}
+	h2{
+		@include fontSmalltitle(); 
+		text-align: center;
+	}
+
+	.colLeft{
+		width: 30%;
+		float: left;
+		margin-top: 2em;
+		text-align: center;
+
+		.detailRow:not(:first-child){
+			margin-top: 2em;
+		}
+		h2{
+			font-weight: 600;
+		}
+		p{
+			line-height: 1.3em;
+			&:first-child{
+				margin-top: .3em;
+			}
+			margin-top: .1em;
+		}
+	}
+
+	.colRight{
+		width: 68%;
+		float: right;
+
+		.aboutSitcon{
+			margin-top: 2em;
+		}
+
+		p{
+			text-indent: 2em;
+			&:not(:first-child){
+				margin-top: .3em;
+			}
+		}
+	}
+}

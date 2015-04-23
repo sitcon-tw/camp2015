@@ -1,0 +1,54 @@
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+	display: block;
+	outline: 0;
+	vertical-align: baseline;
+}
+
+a{
+	font-size: 1em;
+	text-decoration: none;
+	color: inherit;
+	&:hover , &:hover *{
+		text-decoration: underline;
+	}
+}
+
+.pageContainer{
+	position: relative;
+	font-size: 1em;
+	padding-top: 280px;
+	padding-bottom: 280px;
+	width: 60%;
+	max-width: 700px;
+	margin: 0 auto 0 auto;
+}
+
+.full{
+	height: 100%;
+
+	.pageContainer{
+		@include middleCenter();
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+}
+
+.middleHeader{
+	@include fontTitle();
+	text-align: center;
+}
+
+.clear{
+	clear: both;
+}

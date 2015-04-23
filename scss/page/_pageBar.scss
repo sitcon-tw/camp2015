@@ -1,0 +1,66 @@
+
+$pbHeight: 80px;
+
+@mixin fontBar(){
+	font-size: 18px;
+	height: $pbHeight;
+	line-height: $pbHeight;
+};
+@mixin buttonUp(){
+	transition-property: all;
+	transition-duration: 300ms;
+
+	&:hover{
+		transform: translate(0 , -.5em);
+	}
+}
+
+// anchor navbar
+#navbar{
+	position: relative;
+	width: 100%;
+	top: 0;
+}
+
+.navbar{
+
+	@include fontBar();
+	position: absolute;
+	top: -1 * $pbHeight;
+	width: 100%;
+	display: block;
+	z-index: 999;
+
+	font-family: $gothic;
+	text-align: center;
+	color: #fff;
+	background-color: $darkBlack;
+	transfrom: translate3d(0,0,0);
+
+	& *{
+		display: inline-block;
+		@include fontBar();
+	}
+	.webName{
+		cursor: pointer;
+		@include buttonUp();
+	}
+
+	.barButtonSep{
+		display: inline-block;
+		margin-left: .8em;
+		margin-right: .8em;
+	}
+	
+	.barButton{
+		cursor: pointer;
+
+		&:not(:first-child){
+			@include buttonUp();
+		}
+	}
+	.nowPage{
+		color: $lightBlue;
+		transform: translate(0 , -.3em);
+	}
+}
