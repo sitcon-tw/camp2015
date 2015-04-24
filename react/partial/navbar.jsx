@@ -1,5 +1,6 @@
 
 var React = require('react');
+var ruler = require('./ruler.jsx');
 
 var barContent = [
 	{ page:"SITCON 夏令營", dest:"coverPage" },
@@ -23,7 +24,7 @@ var BarButton = React.createClass({
 	scrollTo: function(){
 		var target = this.props.dest;
 		$('html,body').animate({
-			scrollTop: getScrollBottomY( document.getElementById(target) )
+			scrollTop: ruler.getTopY( document.getElementById(target) )
 		} , 1000);
 	},
 	render: function(){
@@ -60,11 +61,11 @@ var BarButtonBlock = React.createClass({
 	},
 	checkWhichPage: function(){
 		var btns = this.props.buttons;
-		var nowPage = btns[0].dest;
+		var nowPage = " ";
 		for(var i=btns.length-1 ; i>0 ; --i){
-			var pageScrollTopY = 
-			  getScrollTopY( document.getElementById(btns[i].dest) );
-			if( getScrollY() >= pageScrollTopY + 80 ){
+			var pageTopY = ruler.getTopY( document.getElementById(btns[i].dest) );
+
+			if( ruler.getScrollY() >= pageTopY-250 ){
 				nowPage = btns[i].dest;
 				break;
 			}
@@ -125,37 +126,36 @@ var NavbarResizeMixin = {
 
 var Navbar = React.createClass({
 	mixins: [NavbarScrollMixin , NavbarResizeMixin],
+	getDefaultProps: function(){
+		return {
+			abs: {
+				position: "absolute",
+				top: "-80px"
+			},
+			fix: {
+				position: "fixed",
+				top: "0px"
+			}
+		}
+	},
 	getInitialState: function(){
 		return {
-			bottom: 0
+			mode: "abs"
 		};
 	},
 	checkFixing: function(){
-		console.log( getScrollY() + " " + getHeight(this.getDOMNode()) );
-		if( getScrollY() >= getHeight(this.getDOMNode()) ){
-			var bottom = 
-			  getScrollY() - getScrollBottomY(document.getElementById('padding3'))
-			  					- getHeight(this.getDOMNode());
-
-			if( bottom < 0 || isMobile.any() )
-				bottom = -1; 
-			if( this.state.position=="fixed" && this.state.bottom==bottom )
-				return;
-			this.setState({
-				position: "fixed",
-				bottom: bottom+"px"
-			});
+		if( ruler.getScrollY() >= ruler.getHeight(document.body)-80 ){
+			if( this.state.mode != "fix" )
+				this.setState({ mode: "fix" });
 		}
 		else{
-			if( this.state.position != "static" )
-				this.setState({
-					position: "static"
-				});
+			if( this.state.mode != "abs" )
+				this.setState({ mode: "abs" });
 		}
 	},
 	render: function(){
 		return (
-			<div className="navbar" style={this.state}>
+			<div className="navbar" style={ this.props[ this.state.mode ] }>
 				<BarButtonBlock buttons={barContent} />
 			</div>
 		);

@@ -19,7 +19,6 @@ $pbHeight: 80px;
 #navbar{
 	position: relative;
 	width: 100%;
-	top: 0;
 }
 
 .navbar{
@@ -36,6 +35,8 @@ $pbHeight: 80px;
 	color: #fff;
 	background-color: $darkBlack;
 	transfrom: translate3d(0,0,0);
+
+	box-shadow: 0px 5px 20px $darkBlack;
 
 	& *{
 		display: inline-block;

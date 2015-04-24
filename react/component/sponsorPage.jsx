@@ -24,7 +24,9 @@ var PartIn = React.createClass({
 		return (
 			<div className="partIn">
 				<img src={this.props.detail.logo} />
-				<div className="partInName">{this.props.detail.name}</div>
+				<div className="partInName">
+					{this.props.detail.name}
+				</div>
 			</div>
 		);
 	}

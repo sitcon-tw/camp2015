@@ -4,10 +4,10 @@ module.exports = {
 		return domObj.offsetHeight;
 	},
 	getScrollTopY: function(domObj){
-		return getTopY(domObj) - document.body.offsetHeight;
+		return this.getTopY(domObj) - document.body.offsetHeight;
 	},
 	getScrollBottomY: function(domObj){
-		return getBottomY(domObj) - document.body.offsetHeight;
+		return this.getBottomY(domObj) - document.body.offsetHeight;
 	},
 	getTopY: function(domObj){
 		return domObj.offsetTop;
@@ -17,7 +17,7 @@ module.exports = {
 	},
 	getScrollY: function(){
 		if (self.pageYOffset)
-			return self.pageYOffset.constructor();
+			return self.pageYOffset;
 		else if (document.documentElement && document.documentElement.scrollTop)
 			return document.documentElement.scrollTop;
 		else if (document.body)// all other Explorers
