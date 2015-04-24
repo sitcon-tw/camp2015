@@ -21,3 +21,8 @@ React.render(
 	<PaddingBlock applyClass="blue" />,
 	document.getElementById('pdBar4')
 );
+
+React.render(
+	<PaddingBlock applyClass="red" />,
+	document.getElementById('pdBar5')
+);

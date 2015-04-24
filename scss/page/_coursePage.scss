@@ -1,8 +1,8 @@
 
 #coursePage{
 
-	background-color: $smokeWhite;
-	color: $lightBlack;
+	background-color: $lightBg;
+	color: $lightText;
 	font-family: $gothic;
 
 	.pageContainer{
@@ -23,19 +23,22 @@
 	table{
 		border-spacing: 0px;
 		border: 0px;
+		width: 100%;
 	}
 
 	tr{
 
 		font-size: 16px;
 		td{
-			background-color: $lightBlack;
-			color: $smokeWhite;
+			background-color: $lightText;
+			color: $lightBg;
 			padding-left: 1em;
 			padding-right: 1em;
 			text-align: center;
 			vertical-align: middle;
-			border: 1px $smokeWhite solid;
+			border: 1px $lightBg solid;
+			padding-top: .5em;
+			padding-bottom: .5em;
 
 			&.course{
 				color: $lightRed;
@@ -48,14 +51,6 @@
 		}
 		p{
 			margin-top: .3em;
-		}
-
-
-		&:not(:first-child){
-			td{
-				padding-top: .5em;
-				padding-bottom: .5em;
-			}
 		}
 	}
 }

@@ -3,8 +3,8 @@ $colNum: 5;
 
 #enrollPage{
 
-	background-color: $darkBlack;
-	color: #aaa;
+	background-color: $darkBg;
+	color: $darkText;
 	font-family: $gothic;
 
 	h2{
@@ -46,7 +46,7 @@ $colNum: 5;
 		}
 
 		@media screen and (max-width: 800px){
-			width: 60%;
+			width: 100%;
 			& .left{
 				width: 100%;
 			}
