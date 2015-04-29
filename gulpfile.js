@@ -48,7 +48,7 @@ gulp.task('index',function(){
 gulp.task('include',function(){
 	return gulp.src('./include/*.js')
 		.pipe(concat('plugin.js'))
-		//.pipe(uglify())
+		.pipe(uglify())
 		.pipe(gulp.dest('./app/'))
 });
 
@@ -68,7 +68,7 @@ gulp.task('style',function(){
 		.on('error' , errorLog )
 		.pipe(autoprefixer('last 2 version'))
 		.pipe(concat('style.css'))
-		//.pipe(cssmin())
+		.pipe(cssmin())
 		.pipe(gulp.dest('./app/'));
 });
 
