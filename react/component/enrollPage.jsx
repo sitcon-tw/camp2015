@@ -8,18 +8,36 @@ for(var i=0,tmp=[] ; i<enrolledName.length ; i+=5){
 }
 
 var React = require('react');
+var ruler = require('../partial/ruler.jsx');
 var Table = require('../partial/table.jsx');
 
 var EnrollPage = React.createClass({
+	getDefaultProps: function(){
+		return { calledAnimation: false };
+	},
+	componentDidMount: function(){
+		window.addEventListener('scroll', this.checkReached, false);
+	},
+	checkReached: function(){
+		if( !ruler.haveReaching( document.getElementById('enrollPage') ) )
+			return;
+		if( this.props.calledAnimation )
+			return;
+		this.props.calledAnimation = true;
+		window.removeEventListener('scroll', this.checkReached, false);
+		enrollPageAnimation();
+	},
 	render: function(){
 		return (
-			<div className="enrollPage pageContainer">
-				<div className="left">
-					<h2>錄取團員</h2>
-					<Table applyClass={"enrollPageTable"}>
-						{enrolledNameTable}
-					</Table>
-					<img src={"img/girl.png"} />
+			<div className="enrollPage">
+				<div className="pageContainer">
+					<div className="left">
+						<h2>錄取團員</h2>
+						<Table applyClass="enrollPageTable" colClass="popInPre">
+							{enrolledNameTable}
+						</Table>
+						<img className="girl" src={"img/girl.png"} />
+					</div>
 				</div>
 			</div>
 		);
@@ -30,3 +48,15 @@ React.render(
 	<EnrollPage />,
 	document.getElementById('enrollPage')
 );
+
+function enrollPageAnimation(){
+	var popIn = document.querySelectorAll('#enrollPage .col');
+	for(var i=0 ; i<popIn.length ; ++i){
+		popIn[i].className = popIn[i].className + 
+			" delayRand" + 
+			Math.floor((Math.random()*20));
+	}
+	for(var i=0 ; i<popIn.length ; ++i)
+		popIn[i].className = popIn[i].className + " popIn";
+	popIn = null;
+}

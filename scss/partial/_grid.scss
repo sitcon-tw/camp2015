@@ -17,11 +17,8 @@ html,body{
 
 a{
 	font-size: 1em;
-	text-decoration: none;
 	color: inherit;
-	&:hover , &:hover *{
-		text-decoration: underline;
-	}
+	cursor: pointer;
 }
 
 .pageContainer{

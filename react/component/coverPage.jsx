@@ -1,20 +1,20 @@
 
 var React = require('react');
-var Waveline = require('../partial/waveline.jsx');
 
 var CoverPage = React.createClass({
 	render: function(){
 		//<Waveline />
 		return (	
 			<div className="coverPage">
-				<div className="coverTop"></div>
-				<div className="pageContainer">
-					<h1>點燃未來之光!</h1>
-					<h2>SITCON新手城</h2>
+				<img className="bg" src="img/background.png"/>
+				<div className="front">
+					<img className="top" src="img/top.png"/>
+					<img className="mid" src="img/mid.png"/>
+					<img className="btn" src="img/btn.png"/>
 				</div>
-				<div className="coverBottom">
-					<div className="skew"></div>
-					<div className="flat"></div>
+				<div className="role">
+					<img className="boy" src="img/headerBoy.png"/>
+					<img className="girl" src="img/headerGirl.png"/>
 				</div>
 			</div>
 		);

@@ -1,8 +1,8 @@
 
-$pbHeight: 80px;
+$pbHeight: 60px;
 
 @mixin fontBar(){
-	font-size: 18px;
+	font-size: 16px;
 	height: $pbHeight;
 	line-height: $pbHeight;
 };
@@ -25,7 +25,7 @@ $pbHeight: 80px;
 
 	@include fontBar();
 	position: absolute;
-	top: -1 * $pbHeight;
+	top: -$pbHeight;
 	width: 100%;
 	display: block;
 	z-index: 999;
@@ -34,17 +34,13 @@ $pbHeight: 80px;
 	text-align: center;
 	color: #fff;
 	background-color: $darkBlack;
-	transfrom: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
 
 	box-shadow: 0px 5px 20px $darkBlack;
 
 	& *{
 		display: inline-block;
 		@include fontBar();
-	}
-	.webName{
-		cursor: pointer;
-		@include buttonUp();
 	}
 
 	.barButtonSep{
@@ -63,5 +59,50 @@ $pbHeight: 80px;
 	.nowPage{
 		color: $lightBlue;
 		transform: translate(0 , -.3em);
+	}
+
+	.barResponsive{
+		display: none;
+	}
+
+	@media screen and (max-width: 600px){
+		.barResponsive{
+			display: block;
+			color: $lightBlue;
+			cursor: pointer;
+		}
+		.barButtonSep{
+			display: none;
+		}
+
+		.barButtonBlock{
+			transition: height 500ms linear;
+			position: absolute;
+			display: none;
+			width: 100%;
+			height: auto;
+			top: $pbHeight;
+			z-index: 9999;
+			background-color: $darkBlack;
+
+			.barButtonSubBlock{
+				display: block;
+				width: 60%;
+				margin: 0 auto;
+				border-top: 1px solid $smokeWhite;
+				
+				&:first-child{
+					display: none;
+				}
+			}
+			.barButton{
+				&:hover{
+					transform: translate(0, 0);
+				}
+			}
+			.nowPage{
+				transform: translate(0, 0);
+			}
+		}
 	}
 }

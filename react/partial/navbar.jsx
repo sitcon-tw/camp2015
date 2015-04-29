@@ -6,16 +6,45 @@ var barContent = [
 	{ page:"SITCON 夏令營", dest:"coverPage" },
 	{ page:"關於", dest:"aboutPage" },
 	{ page:"錄取", dest:"enrollPage" },
-	{ page:"付費", dest:"paywayPage" },
+	{ page:"報名", dest:"paywayPage" },
 	{ page:"課程", dest:"coursePage" },
 	{ page:"員工", dest:"staffPage" },
 	{ page:"贊助", dest:"sponsorPage" }
 ];
 
-var WebName = React.createClass({
-	render: function(){
+var BarResponsive = React.createClass({
+	componentDidMount: function(){
+		this.getDOMNode().addEventListener('click', this.open , false);
+	},
+	bindOpen: function(){
+		this.getDOMNode().addEventListener('click', this.open , false);
+		window.removeEventListener('click', this.close , false);
+	},
+	bindClose: function(){
+		window.addEventListener('click', this.close , false);
+		this.getDOMNode().removeEventListener('click', this.open , false);
+	},
+	open: function(){
+		$('.barButtonBlock').css('display','block');
+		var that = this;
+		setTimeout( function(){
+			that.bindClose();
+			that = null;
+		},500);
+	},
+	close: function(){
+		$('.barButtonBlock').css('display','none');
+		var that = this;
+		setTimeout( function(){
+			that.bindOpen();
+			that = null;
+		},500);
+	},
+	render: function() {
 		return (
-			<div className="webName">{this.props.children}</div>
+			<div className="barResponsive">
+				MENU
+			</div>
 		);
 	}
 });
@@ -63,9 +92,7 @@ var BarButtonBlock = React.createClass({
 		var btns = this.props.buttons;
 		var nowPage = " ";
 		for(var i=btns.length-1 ; i>0 ; --i){
-			var pageTopY = ruler.getTopY( document.getElementById(btns[i].dest) );
-
-			if( ruler.getScrollY() >= pageTopY-250 ){
+			if( ruler.haveReached( document.getElementById(btns[i].dest) ) ){
 				nowPage = btns[i].dest;
 				break;
 			}
@@ -75,15 +102,14 @@ var BarButtonBlock = React.createClass({
 		this.setState( { nowPage:nowPage } );
 	},
 	render: function(){
-		var cnt = 0;
 		var nowPage = this.state.nowPage;
-		var allBarButtons = this.props.buttons.map(function(button){
+		var allBarButtons = this.props.buttons.map(function(button,cnt){
 			var now = "false";
 			if( button.dest == nowPage )
 				now = "true";
-			if( cnt++ == 0 )
+			if( cnt == 0 )
 				return (
-					<div className="barButtonBlock">
+					<div className="barButtonSubBlock" key={cnt}>
 						<BarButton now={now} dest={button.dest}>
 							{button.page}
 						</BarButton>
@@ -91,7 +117,7 @@ var BarButtonBlock = React.createClass({
 				);
 			else
 				return (
-					<div>
+					<div className="barButtonSubBlock" key={cnt}>
 						<div className='barButtonSep'>|</div>
 						<BarButton  now={now} dest={button.dest}>
 							{button.page}
@@ -130,12 +156,13 @@ var Navbar = React.createClass({
 		return {
 			abs: {
 				position: "absolute",
-				top: "-80px"
+				top: "-60px"
 			},
 			fix: {
 				position: "fixed",
 				top: "0px"
-			}
+			},
+			anchor: document.getElementById('coverPage')
 		}
 	},
 	getInitialState: function(){
@@ -144,7 +171,8 @@ var Navbar = React.createClass({
 		};
 	},
 	checkFixing: function(){
-		if( ruler.getScrollY() >= ruler.getHeight(document.body)-80 ){
+		if( ruler.getScrollY() >= 
+				ruler.getBottomY(this.props.anchor)-60 ){
 			if( this.state.mode != "fix" )
 				this.setState({ mode: "fix" });
 		}
@@ -155,7 +183,8 @@ var Navbar = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="navbar" style={ this.props[ this.state.mode ] }>
+			<div ref="navbar" className="navbar" style={ this.props[ this.state.mode ] }>
+				<BarResponsive />
 				<BarButtonBlock buttons={barContent} />
 			</div>
 		);

@@ -1,13 +1,19 @@
 
 module.exports = {
+	topPage: document.getElementById("coverPage"),
 	getHeight: function(domObj){
 		return domObj.offsetHeight;
 	},
 	getScrollTopY: function(domObj){
-		return this.getTopY(domObj) - document.body.offsetHeight;
+		var cntDistance = 0;
+		while( domObj && domObj.offsetTop ){
+			cntDistance += domObj.offsetTop;
+			domObj = domObj.offsetParent;
+		}
+		return cntDistance;
 	},
 	getScrollBottomY: function(domObj){
-		return this.getBottomY(domObj) - document.body.offsetHeight;
+		return this.getScrollTopY(domObj) - this.getHeight(this.topPage);
 	},
 	getTopY: function(domObj){
 		return domObj.offsetTop;
@@ -22,5 +28,19 @@ module.exports = {
 			return document.documentElement.scrollTop;
 		else if (document.body)// all other Explorers
 			return document.body.scrollTop;
+	},
+	// for navbar to know which page now
+	haveReached: function(domObj){
+		if( this.getScrollY() >= 
+				this.getTopY(domObj)-250 )
+			return true;
+		return false;
+	},
+	// for every page to trigger admisson animation
+	haveReaching: function(domObj){
+		if( this.getScrollY() >= 
+				this.getScrollTopY(domObj)-this.getHeight(document.body)/4*3 )
+			return true;
+		return false;
 	}
 };

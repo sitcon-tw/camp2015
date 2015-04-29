@@ -5,10 +5,8 @@ var Article = require('./article.jsx');
 var TimetableCol = React.createClass({
 	render: function(){
 		var applyClass = "timetableCol c"+this.props.cnt;
-		if( this.props.content.l )
-			applyClass += " course";
-		if( this.props.content.easy )
-			applyClass += " easy";
+		if( this.props.content.type )
+			applyClass += " "+this.props.content.type;
 		return (
 			<td className={applyClass}
 				rowSpan={this.props.content.r}
@@ -26,11 +24,10 @@ var TimetableCol = React.createClass({
 
 var TimetableRow = React.createClass({
 	render: function(){
-		var tablerow = [] , cnt = 0;
-		this.props.content.forEach(function(col){
-			++cnt;
+		var tablerow = [];
+		this.props.content.forEach(function(col,cnt){
 			tablerow.push(
-				<TimetableCol cnt={cnt} content={col} />
+				<TimetableCol cnt={cnt} content={col} key={cnt} />
 			);
 		});
 		return (
@@ -45,11 +42,10 @@ var TimetableRow = React.createClass({
 
 var Timetable = React.createClass({
 	render: function(){
-		var timetable = [] , cnt = 0;
-		this.props.content.forEach(function(row){
-			++cnt;
+		var timetable = [];
+		this.props.content.forEach(function(row,cnt){
 			timetable.push(
-				<TimetableRow cnt={cnt} content={row} />
+				<TimetableRow cnt={cnt} content={row} key={cnt} />
 			);
 		});
 		return (

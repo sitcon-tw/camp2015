@@ -25,12 +25,19 @@
 			$containerWidth: $containerWidth + 100px;
 		}
 
+		@media screen and (max-width: 400px){
+			.partIn{
+				width: 200px;
+				height: 150px;
+			}
+		}
+
 	}
 
 	.partInGroup:not(:first-child){
 		margin-top: 100px;
 	}
-	.groutHeader{
+	.groupHeader{
 		$color1: $darkBlue;
 		$color2: $smokeWhite;
 		position: relative;

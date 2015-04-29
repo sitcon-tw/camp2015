@@ -31,7 +31,6 @@ gulp.task('watch',function(){
 	gulp.watch( './include/*.js',['include',reload]);
 	gulp.watch( './scss/**/*.scss' ,['style',reload]);
 	gulp.watch( './react/**/*.jsx' ,['component',reload]);
-	gulp.watch( './img/*' ,['img',reload] );
 });
 
 /*
@@ -96,7 +95,7 @@ gulp.task('component',function(){
 *		img/ => app/img/
 */
 gulp.task('img',function(){
-	return gulp.src('./img/*')
+	return gulp.src('./img/**/*')
 		.pipe(imagemin())
 		.on('error' , errorLog )
 		.pipe(gulp.dest('./app/img/'));

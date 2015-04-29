@@ -26,19 +26,14 @@ $colNum: 5;
 	}
 
 	.pageContainer{
-		width: 80%;/*
-		background-position: 90% -50%;
-		background-attachment: fixed;
-		background-size: 800px auto;
-		background-repeat: no-repeat;
-		background-image: url('img/girl.png');*/
+		width: 80%;
 
 		.left{
 			width: 80%;
 		}
 		img{
 			position: absolute;
-			top: 55%;
+			top: 50%;
 			right: 0%;
 			transform-style: preserve-3d;
 			transform: translate(-0%, -50%);

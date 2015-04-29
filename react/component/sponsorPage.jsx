@@ -1,19 +1,19 @@
 
 var partIn = [
 	{group:"主辦單位",applyClass:"mainPart",parts:[
-		{name:"學生計算機年會",logo:"img/sitconLogo.png"},
-		{name:"中研院・資創中心・自由軟體鑄造場",logo:"img/openfoundLogo.png"}
+		{name:"學生計算機年會",logo:"sitconLogo.png"},
+		{name:"中研院・資創中心・自由軟體鑄造場",logo:"openfoundLogo.png"}
 	]},
 	{group:"協辦單位",applyClass:"secondPart",parts:[
-		{name:"政治大學資訊科學系",logo:"img/blackLogo.png"}
+		{name:"政治大學資訊科學系",logo:"blackLogo.png"}
 	]},
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
-		{name:"PIXNET DIGITAL MEDIA",logo:"img/pixnetLogo.png"}
+		{name:"PIXNET DIGITAL MEDIA",logo:"pixnetLogo.png"}
 	]},
 	{group:"贊助單位",applyClass:"sponsorPart",parts:[
-		{name:"MUZIK ONLINE",logo:"img/muzikLogo.png"},
-		{name:"天瓏資訊圖書",logo:"img/tenlonLogo.PNG"},
-		{name:"GitCafe",logo:"img/gitcafeLogo.jpg"}
+		{name:"MUZIK ONLINE",logo:"muzikLogo.png"},
+		{name:"天瓏資訊圖書",logo:"tenlonLogo.PNG"},
+		{name:"GitCafe",logo:"gitcafeLogo.jpg"}
 	]}
 ];
 
@@ -23,7 +23,7 @@ var PartIn = React.createClass({
 	render: function() {
 		return (
 			<div className="partIn">
-				<img src={this.props.detail.logo} />
+				<img src={"img/logos/"+this.props.detail.logo} />
 				<div className="partInName">
 					{this.props.detail.name}
 				</div>
@@ -35,14 +35,14 @@ var PartIn = React.createClass({
 var PartInGroup = React.createClass({
 	render: function() {
 		var allPartIn = [];
-		this.props.partIn.forEach(function(p){
+		this.props.partIn.forEach(function(p,cnt){
 			allPartIn.push(
-				<PartIn detail={p} />
+				<PartIn detail={p} key={cnt} />
 			);
 		})
 		return (
 			<div className={"partInGroup "+this.props.applyClass}>
-				<div className="groutHeader">
+				<div className="groupHeader">
 					<h2>{this.props.groupName}</h2>
 					<div className="groupHeaderDecoration">
 						<div className="maskH2">{this.props.groupName}</div>
@@ -58,9 +58,10 @@ var PartInGroup = React.createClass({
 var SponsorPage = React.createClass({
 	render: function() {
 		var allGroup = [];
-		this.props.groups.forEach(function(g){
+		this.props.groups.forEach(function(g,cnt){
 			allGroup.push(
-				<PartInGroup groupName={g.group} partIn={g.parts} applyClass={g.applyClass} />
+				<PartInGroup key={cnt}
+					groupName={g.group} partIn={g.parts} applyClass={g.applyClass} />
 			);
 		})
 		return (

@@ -1,0 +1,74 @@
+
+$bezierTime: cubic-bezier(.16 , .84 , .44 , 1);
+
+
+.fadeInPre{
+	transition: opacity 300ms $bezierTime;
+	opacity: 0;
+}
+.fadeIn{
+	opacity: 1;}
+
+.popInPre{
+	transition: transform 500ms $bezierTime,
+					opacity 500ms $bezierTime;
+	transform: scale(0,0);
+	opacity: 0;
+}
+.popIn{
+	transform: scale(1,1);
+	opacity: 1;
+}
+
+.slideInPre{
+	transition: transform 600ms $bezierTime,
+					opacity 600ms $bezierTime;
+	transform: translateX(60%);
+	opacity: 0;
+}
+.slideIn{
+	transform: translateX(0%);
+	opacity: 1;
+}
+
+$delayCnt: 0;
+
+@while $delayCnt < 10{
+	.delay#{$delayCnt}{
+		transition-delay: 80ms * $delayCnt;
+	}
+	$delayCnt: $delayCnt+1;
+}
+
+$delayRandCnt: 0;
+
+@while $delayRandCnt < 20{
+	.delayRand#{$delayRandCnt}{
+		transition-delay: (50ms + random(10ms) - 5ms ) * $delayRandCnt;
+	}
+	$delayRandCnt: $delayRandCnt+1;
+}
+
+@keyframes colorChange{
+	0%{
+		color: $lightRed;
+	}
+	25%{
+		color: #FFFC00;
+	}
+	50%{
+		color: #5873FB;
+	}
+	75%{
+		color: #56FD65;
+	}
+	100%{
+		color: $lightRed
+	}
+}
+.colorChange{
+	animation-name: colorChange;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
+	animation-timing-function: linear;
+}

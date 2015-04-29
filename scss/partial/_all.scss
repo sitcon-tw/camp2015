@@ -1,32 +1,46 @@
-$lightBlue: #57b3d8;
+$lightBlue: #58cbfb;
 $darkBlue: #185281;
+$kuroBlue: #243650;
 $lightBlack: #333;
-$darkBlack: #131313;
+$darkBlack: #121313;
 $lightRed: #FFB1B1;
 $darkRed: #af322e;
-$smokeWhite: #eee;
+$kuroRed: #982f2d;
+$smokeWhite: #f0f2f2;
 
-$gothic: "Lato", sans-serif,"WenQuanYi Zen Hei","Microsoft JhengHei","Heiti TC";
+$gothic: 'PT Sans Narrow','Source Han Sans TWHK',sans-serif;
 $gamble: Arial, "新細明體";
 
+$baseEm: 20;
+
+*{
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
 @mixin fontTitle(){
-	font-size: 48px;
+	//font-size: 48px;
+	font-size: 48em/$baseEm;
 	font-weight: 400;
 }
 @mixin fontSubtitle(){
-	font-size: 36px;
+	//font-size: 36px;
+	font-size: 36em/$baseEm;
 	font-weight: 400;
 }
 @mixin fontSmalltitle(){
-	font-size: 24px;
-	font-weight: 400;
+	//font-size: 24em;
+	font-size: 22em/$baseEm;
+	font-weight: 900;
 }
 @mixin fontArticle(){
-	font-size: 18px;
-	line-height: 1.6em;
+	//font-size: 18px;
+	font-size: 20em/$baseEm;
+	line-height: 2em;
 }
 @mixin fontExplain(){
-	font-size: 14px;
+	//font-size: 14px;
+	font-size: 14em/$baseEm;
 	line-height: 1.3em;
 	color: gray;
 }

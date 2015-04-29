@@ -13,27 +13,28 @@
 
 	a{
 		color: $darkBlue;
-		cursor: pointer;
 	}
 
 	.paywayArticle{
 
-		@include fontArticle();
-		line-height: 1.2em;
-
-		p{
+		&>p{
+			@include fontArticle();
 			padding-top: .5em;
+
+			a:hover{
+				text-decoration: underline;
+			}
 		}
 		span{
+			@include fontArticle();
 			display: inline-block;
 			&.left{
 				width: 49%;
-				vertical-align: middle;
 				text-align: right;
 				margin-right: 1%;
 			}
 			&.right{
-				width: 49%;
+				width: 47%;
 				vertical-align: top;
 				text-align: left;
 			}
@@ -49,7 +50,49 @@
 		ol{
 			padding-left: 3em;
 			li{
-				margin-top: .3em;
+				@include fontArticle();
+				line-height: 1.6em;
+				padding-top: .8em;
+			}
+		}
+
+		.registBlock{
+			display: block;
+			width: 100%;
+			text-align: center;
+			
+			.regist1 , .regist2{
+				transition: opacity 500ms ease-in-out;
+				width: 49%;
+				padding-top: 4em;
+				padding-bottom: 4em;
+				opacity: .8;
+				&:hover{
+					text-decoration: none;
+					opacity: 1;
+				}
+				& p{
+					@include fontArticle();
+					display: block;
+					padding-top: 0;
+					line-height: 1.2em;
+				}
+			}
+			.regist1{
+				float: left;
+				background-color: #E7BEBE;
+				color: #666;
+			}
+			.regist2{
+				float: right;
+				background-color: #A1B2CB;
+				color: #666;
+			}
+
+			&::after{
+				content: " ";
+				display: block;
+				clear: both;
 			}
 		}
 	}

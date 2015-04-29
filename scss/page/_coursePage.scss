@@ -28,7 +28,7 @@
 
 	tr{
 
-		font-size: 16px;
+		font-size: 16em/$baseEm;
 		td{
 			background-color: $lightText;
 			color: $lightBg;
@@ -41,7 +41,12 @@
 			padding-bottom: .5em;
 
 			&.course{
-				color: $lightRed;
+				color: $lightBlue;
+				cursor: pointer;
+			}
+			&.activity{
+				@extend .colorChange;
+				color: $smokeWhite;
 				cursor: pointer;
 			}
 			&.easy{

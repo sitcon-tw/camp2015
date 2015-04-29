@@ -18,25 +18,32 @@ var aboutCampText = {
 
 var React = require('react');
 var Article = require('../partial/article.jsx');
+var ruler = require('../partial/ruler.jsx');
 
-
-var AboutSitcon = React.createClass({
-	render: function(){
-		return (
-			<div className="aboutSitcon">
-				<h2>{aboutSitconText.title}</h2>
-				<Article>
-					{aboutSitconText.content}
-				</Article>
-			</div>
-		);
+var animateApply = "slideIn";
+var slideInMixins = {
+	getDefaultProps: function(){
+		return { calledAnimation: false };
+	},
+	componentDidMount: function(){
+		window.addEventListener('scroll', this.checkReached, false);
+	},
+	checkReached: function(){
+		if( !ruler.haveReaching( this.getDOMNode() ) )
+			return;
+		if( this.props.calledAnimation )
+			return;
+		this.props.calledAnimation = true;
+		window.removeEventListener('scroll', this.checkReached, false);
+		this.getDOMNode().className +=  " " + animateApply;
 	}
-});
+};
 
 var AboutCamp = React.createClass({
+	mixins: [slideInMixins],
 	render: function(){
 		return (
-			<div className="aboutCamp">	
+			<div className={"aboutCamp "+animateApply+"Pre"}>	
 				<h2>{aboutCampText.title}</h2>
 				<Article>
 					{aboutCampText.content}
@@ -46,11 +53,26 @@ var AboutCamp = React.createClass({
 	}
 });
 
-var AboutDetail = React.createClass({
+var AboutSitcon = React.createClass({
+	mixins:[slideInMixins],
 	render: function(){
-		var allDetail = this.props.details.map(function(li){
+		return (
+			<div className={"aboutSitcon "+animateApply+"Pre"}>
+				<h2>{aboutSitconText.title}</h2>
+				<Article>
+					{aboutSitconText.content}
+				</Article>
+			</div>
+		);
+	}
+});
+
+var AboutDetail = React.createClass({
+	mixins:[slideInMixins],
+	render: function(){
+		var allDetail = this.props.details.map(function(li,cnt){
 			return (
-				<div className="detailRow">
+				<div className="detailRow" key={"detailRow"+cnt}>
 					<h2>{li.title}</h2>
 					<Article>
 						{li.content}
@@ -59,7 +81,7 @@ var AboutDetail = React.createClass({
 			);
 		})
 		return (
-			<div className="aboutDetail">
+			<div className={"aboutDetail "+animateApply+"Pre"}>
 				{allDetail}
 			</div>
 		);
@@ -70,13 +92,10 @@ var AboutPage = React.createClass({
 	render: function(){
 		return(
 			<div className="aboutPage pageContainer">
-				<div className="colLeft">
-					<AboutDetail details={aboutDetailText} />
-				</div>
-				<div className="colRight">
-					<AboutCamp />
-					<AboutSitcon />
-				</div>
+				<img className="header" src="img/logo.png" />
+				<AboutCamp />
+				<AboutSitcon />
+				<AboutDetail details={aboutDetailText} />
 				<div className="clear"></div>
 			</div>
 		);
@@ -87,3 +106,13 @@ React.render(
 	<AboutPage />,
 	document.getElementById('aboutPage')
 );
+
+
+function aboutPageAnimation(){
+	var delay = 100;
+	var slideIn = document.querySelectorAll('#aboutPage .'+animateApply+'Pre');
+	for(var i=0 ; i<slideIn.length ; ++i){
+		slideIn[i].className = slideIn[i].className + " " + animateApply;
+	}
+	slideIn = null;
+}
