@@ -29,11 +29,11 @@ var paywayParagraphs = [
 	"$ <div class='registBlock'>\
 			<a class='regist1'>\
 				<p>我要報名第一梯次</p>\
-				<p>(7.20 ~ 7.23)</p>\
+				<p>07.20 ~ 07.23</p>\
 			</a>\
 			<a class='regist2'>\
 				<p>我要報名第二梯次</p>\
-				<p>(8.03 ~ 8.06)</p>\
+				<p>08.03 ~ 08.06</p>\
 			</a>\
 		</div>",
 	"注意事項",

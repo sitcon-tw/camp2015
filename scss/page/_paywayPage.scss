@@ -64,9 +64,10 @@
 			.regist1 , .regist2{
 				transition: opacity 500ms ease-in-out;
 				width: 49%;
-				padding-top: 4em;
-				padding-bottom: 4em;
-				opacity: .8;
+				padding-top: .9em;
+				padding-bottom: .9em;
+				opacity: 1;
+				border-radius: 5px;
 				&:hover{
 					text-decoration: none;
 					opacity: 1;
@@ -80,13 +81,13 @@
 			}
 			.regist1{
 				float: left;
-				background-color: #E7BEBE;
-				color: #666;
+				background-color: $darkRed;
+				color: $smokeWhite;
 			}
 			.regist2{
 				float: right;
-				background-color: #A1B2CB;
-				color: #666;
+				background-color: $darkBlue;
+				color: $smokeWhite;
 			}
 
 			&::after{
