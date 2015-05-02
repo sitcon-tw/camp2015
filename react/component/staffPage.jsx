@@ -92,7 +92,7 @@ var StaffPage = React.createClass({
 		<div>
 			<div className="staffPage pageContainer">
 				<div className="left">
-					<h2>工作人員</h2>
+					<h2>工作團隊</h2>
 					<Table applyClass="staffPageTable" rowClass="slideInUpPre">
 						{staffTaChi}
 					</Table>

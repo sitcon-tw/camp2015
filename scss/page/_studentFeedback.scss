@@ -11,9 +11,9 @@
 		vertical-align: top;
 		color: $lightText;
 
+		padding-left: 2%;
 		&:not(:first-child){
 			margin-left: 1%;
-			padding-left: 2%;
 			border-left: 1px solid #aaa;
 		}
 
@@ -34,6 +34,19 @@
 				line-height: 1.8em;
 			}
 		}
+
+		@media screen and (max-width: 1400px){
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+
+			&:not(:first-child){
+				margin-top: 2em;
+				margin-left: auto;
+				margin-right: auto;
+				border-left: 0;
+			}
+		}
 	}
 }
 
@@ -50,9 +63,9 @@
 		vertical-align: top;
 		color: $darkText;
 
+		padding-left: 2%;
 		&:not(:first-child){
 			margin-left: 1%;
-			padding-left: 2%;
 			border-left: 1px solid #aaa;
 		}
 
@@ -72,6 +85,28 @@
 			p{
 				line-height: 1.8em;
 			}
+		}
+	}
+
+	@media screen and (max-width: 1400px){
+	
+		.studentFeedbackBlock{
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+
+			&:not(:first-child){
+				margin-top: 2em;
+				margin-left: auto;
+				margin-right: auto;
+				border-left: 0;
+			}
+		}
+
+		@media screen and (max-width: 1200px){
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}
 }

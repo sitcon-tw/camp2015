@@ -16,7 +16,7 @@ var paywayParagraphs = [
 			開放報名\
 		</span>\
 		<span class='right'>\
-			2015 . 05 . 05\
+			2015 . 05 . 15\
 		</span>",
 	"$ <span class='left'>\
 			報名截止\
