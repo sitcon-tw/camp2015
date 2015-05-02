@@ -18,14 +18,35 @@ var partIn = [
 ];
 
 var React = require('react');
+var ruler = require('../partial/ruler');
+
+var popInMixins = {
+	getDefaultProps: function(){
+		return { calledAnimation: false };
+	},
+	componentDidMount: function(){
+		window.addEventListener('scroll', this.checkReached, false);
+	},
+	checkReached: function(){
+		if( !ruler.haveReaching( this.getDOMNode() ) )
+			return;
+		if( this.props.calledAnimation )
+			return;
+		this.props.calledAnimation = true;
+		window.removeEventListener('scroll', this.checkReached, false);
+		this.getDOMNode().className +=  " popIn";
+	}
+};
 
 var PartIn = React.createClass({
+	mixins: [popInMixins],
 	render: function() {
 		return (
-			<div className="partIn">
+			<div className={"partIn popInPre "+this.props.colorPick}>
 				<img src={"img/logos/"+this.props.detail.logo} />
 				<div className="partInName">
-					{this.props.detail.name}
+					<strong>{this.props.detail.name}</strong>
+					<div className="partInNameBg"></div>
 				</div>
 			</div>
 		);
@@ -35,18 +56,27 @@ var PartIn = React.createClass({
 var PartInGroup = React.createClass({
 	render: function() {
 		var allPartIn = [];
+		var colorPick = this.props.colorPick;
 		this.props.partIn.forEach(function(p,cnt){
 			allPartIn.push(
-				<PartIn detail={p} key={cnt} />
+				<PartIn detail={p}
+					colorPick={colorPick} key={cnt} />
 			);
 		})
 		return (
 			<div className={"partInGroup "+this.props.applyClass}>
-				<div className="groupHeader">
-					<h2>{this.props.groupName}</h2>
-					<div className="groupHeaderDecoration">
-						<div className="maskH2">{this.props.groupName}</div>
-						<div className="maskBg"></div>
+				<div className={"groupHeader "+colorPick}>
+					<div className="upBar">
+						<div className="downBorder borderFloatLeft"></div>
+						<div className="downBorder borderFloatRight"></div>
+					</div>
+					<h2>
+						{this.props.groupName}
+						<div className="middleBar"></div>
+					</h2>
+					<div className="downBar">
+						<div className="upBorder borderFloatLeft"></div>
+						<div className="upBorder borderFloatRight"></div>
 					</div>
 				</div>
 				{allPartIn}
@@ -59,9 +89,13 @@ var SponsorPage = React.createClass({
 	render: function() {
 		var allGroup = [];
 		this.props.groups.forEach(function(g,cnt){
+			var colorPick = "red";
+			if( cnt%2 )
+				colorPick = " blue";
 			allGroup.push(
 				<PartInGroup key={cnt}
-					groupName={g.group} partIn={g.parts} applyClass={g.applyClass} />
+					groupName={g.group} partIn={g.parts} 
+					colorPick={colorPick} applyClass={g.applyClass} />
 			);
 		})
 		return (

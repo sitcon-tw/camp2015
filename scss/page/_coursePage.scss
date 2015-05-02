@@ -40,22 +40,36 @@
 			padding-top: .5em;
 			padding-bottom: .5em;
 
+			transition: background-color 500ms ease-in-out;
+
 			&.course{
 				color: $lightBlue;
 				cursor: pointer;
+
+				&:hover{
+					background-color: $darkBlack;
+				}
 			}
 			&.activity{
-				@extend .colorChange;
-				color: $smokeWhite;
+				color: $darkYellow;
 				cursor: pointer;
+
+				&:hover{
+					background-color: $darkBlack;
+				}
 			}
 			&.easy{
-				background-color: #ddd;
-				color: $lightBlack;
+				background-color: $darkGray;
+				color: $smokeWhite;
 			}
 		}
 		p{
 			margin-top: .3em;
+		}
+		tr:first-child{
+			td{
+				font-weight: 900;
+			}
 		}
 	}
 }

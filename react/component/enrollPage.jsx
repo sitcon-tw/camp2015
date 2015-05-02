@@ -19,7 +19,7 @@ var EnrollPage = React.createClass({
 		window.addEventListener('scroll', this.checkReached, false);
 	},
 	checkReached: function(){
-		if( !ruler.haveReaching( document.getElementById('enrollPage') ) )
+		if( !ruler.haveReached( document.getElementById('enrollPage') ) )
 			return;
 		if( this.props.calledAnimation )
 			return;

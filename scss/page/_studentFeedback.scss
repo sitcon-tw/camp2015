@@ -1,0 +1,77 @@
+
+#coursePage .studentFeedback{
+	position: relative;
+	width: 100%;
+	margin-top: 4em;
+
+	.studentFeedbackBlock{
+		@include fontArticle();
+		display: inline-block;
+		width: 30%;
+		vertical-align: top;
+		color: $lightText;
+
+		&:not(:first-child){
+			margin-left: 1%;
+			padding-left: 2%;
+			border-left: 1px solid #aaa;
+		}
+
+		h2{
+			@include fontArticle();
+			font-weight: 100;
+
+			strong{
+				color: $lightBlue;
+				font-weight: 900;
+			}
+			span{ color: $lightText; }
+		}
+
+		.articleBlock{
+			font-size: .9em;
+			p{
+				line-height: 1.8em;
+			}
+		}
+	}
+}
+
+#staffPage .studentFeedback{
+	width: 60%;
+	margin: 0 auto;
+	margin-top: -140px;
+	padding-bottom: 280px;
+
+	.studentFeedbackBlock{
+		@include fontArticle();
+		display: inline-block;
+		width: 30%;
+		vertical-align: top;
+		color: $darkText;
+
+		&:not(:first-child){
+			margin-left: 1%;
+			padding-left: 2%;
+			border-left: 1px solid #aaa;
+		}
+
+		h2{
+			@include fontArticle();
+			font-weight: 100;
+
+			strong{
+				color: $lightBlue;
+				font-weight: 900;
+			}
+			span{ color: $darkText; }
+		}
+
+		.articleBlock{
+			font-size: .9em;
+			p{
+				line-height: 1.8em;
+			}
+		}
+	}
+}

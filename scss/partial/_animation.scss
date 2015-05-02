@@ -30,10 +30,20 @@ $bezierTime: cubic-bezier(.16 , .84 , .44 , 1);
 	transform: translateX(0%);
 	opacity: 1;
 }
+.slideInUpPre{
+	transition: transform 600ms $bezierTime,
+					opacity 600ms $bezierTime;
+	transform: translateY(200%);
+	opacity: 0;
+}
+.slideInUp{
+	transform: translateY(0%);
+	opacity: 1;
+}
 
 $delayCnt: 0;
 
-@while $delayCnt < 10{
+@while $delayCnt < 20{
 	.delay#{$delayCnt}{
 		transition-delay: 80ms * $delayCnt;
 	}

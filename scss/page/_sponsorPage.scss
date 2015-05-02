@@ -34,46 +34,103 @@
 
 	}
 
+	$red: $darkRed;
+	$blue: $darkBlue;
+	$decorationHeight: 15px;
+	$mainHeight: 75px;
 	.partInGroup:not(:first-child){
 		margin-top: 100px;
 	}
 	.groupHeader{
-		$color1: $darkBlue;
-		$color2: $smokeWhite;
+		display: block;
+		width: 300px;
 		position: relative;
+		color: $smokeWhite;
+		margin-bottom: 2em;
+
+		&.red{
+			.upBar{ background-color: $red }
+			.middleBar{ background-color: $red }
+			.downBar{ background-color: $red }
+			.downBorder{
+				border-bottom: $decorationHeight solid $red;
+			}
+			.upBorder{
+				border-top: $decorationHeight solid $red;
+			}
+			.partInNameBg{ background-color: $red; }
+		}
+		&.blue{
+			.upBar{ background-color: $blue }
+			.middleBar{ background-color: $blue }
+			.downBar{ background-color: $blue }
+			.downBorder{
+				border-bottom: $decorationHeight solid $blue;
+			}
+			.upBorder{
+				border-top: $decorationHeight solid $blue;
+			}
+			.partInNameBg{ background-color: $blue; }
+		}
 		h2{
 			@include fontTitle();
-			z-index: 100;
-			color: $color1;
-		}
-		.groupHeaderDecoration{
-			display: block;
-			position: absolute;
-			height: 50%;
-			width: 100%;
-			z-index: 200;
-			bottom: 0;
+			position: relative;
+			height: $mainHeight;
+			line-height: $mainHeight;
+			text-indent: .5em;
+			font-weight: 900;
 			overflow: hidden;
-			
-			.maskH2{
-				@include fontTitle();
+			z-index: 500;
+
+			.middleBar{
 				position: absolute;
+				z-index: -1;
+				top: 0;
+				left: 0;
 				width: 100%;
-				bottom: 0;
-				z-index: 900;
-				color: $color2;
-				opacity: .95;
-			}
-			.maskBg{
-				position: absolute;
 				height: 100%;
-				width: 50%;
-				bottom: 0;
-				z-index: 0;
-				background-color: $color1;
-				transform-origin: left bottom;
-				transform: skewX(30deg);
+				transform-style: preserve-3d;
+				transform-origin: right bottom;
+				transform: skewX(25deg);
 			}
+		}
+		.downBorder{
+			position: absolute;
+			bottom: 0;
+			width: 0;
+			height: 0;
+			border-top: $decorationHeight solid transparent;
+			border-left: $decorationHeight solid transparent;
+			border-right: $decorationHeight solid transparent;
+		}
+		.upBorder{
+			position: absolute;
+			top: 0;
+			width: 0;
+			height: 0;
+			border-bottom: $decorationHeight solid transparent;
+			border-left: $decorationHeight solid transparent;
+			border-right: $decorationHeight solid transparent;
+		}
+		.borderFloatLeft{
+			left: -$decorationHeight;
+		}
+		.borderFloatRight{
+			right: -$decorationHeight;
+		}
+		.upBar{
+			position: absolute;
+			width: 60%;
+			height: $decorationHeight;
+			top: -$decorationHeight;
+			left: $decorationHeight;
+		}
+		.downBar{
+			position: absolute;
+			width: 20%;
+			height: $decorationHeight;
+			bottom: -$decorationHeight;
+			left: $decorationHeight;
 		}
 	}
 	
@@ -91,12 +148,44 @@
 			@include middleCenter();
 		}
 		.partInName{
+			@include fontArticle();
 			position: absolute;
-			left: -1em;
-			bottom: -.4em;
-			padding: .2em 1em;
-			background-color: $darkRed;
+			right: -.5em;
+			bottom: -.7em;
 			color: $smokeWhite;
+			overflow: hidden;
+
+			strong{
+				position: relative;
+				z-index: 100;
+				display: block;
+				padding-top: .5em;
+				padding-bottom: .2em;
+				padding-right: 1.3em;
+				padding-left: 3em;
+				@include fontArticle();
+			}
+			.partInNameBg{
+				position: absolute;
+				height: 100%;
+				width: 100%;
+				z-index: 0;
+				top: 0;
+				right: 0;
+				transform-style: preserve-3d;
+				transform-origin: left bottom;
+				transform: skewX(-25deg);
+			}
+		}
+		&.red{
+			.partInNameBg{
+				background-color: $red;
+			}
+		}
+		&.blue{
+			.partInNameBg{
+				background-color: $blue;
+			}
 		}
 	}
 
