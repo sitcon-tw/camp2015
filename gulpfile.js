@@ -8,7 +8,6 @@ var concat = require('gulp-concat'),
 	 htmlmin = require('gulp-htmlmin'),
 	 autoprefixer = require('gulp-autoprefixer'),
 	 reactify = require('reactify'),
-	 manifest = require('gulp-manifest'),
 	 source = require('vinyl-source-stream'),
 	 buffer = require('vinyl-buffer'),
 	 browserify = require('browserify'),
@@ -32,7 +31,6 @@ gulp.task('watch',function(){
 	gulp.watch( './include/*.js',['include',reload]);
 	gulp.watch( './scss/**/*.scss' ,['style',reload]);
 	gulp.watch( './react/**/*.jsx' ,['component',reload]);
-	gulp.watch( './app/*' ,['manifest']);
 });
 
 /*
