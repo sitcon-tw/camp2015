@@ -15,7 +15,7 @@ var concat = require('gulp-concat'),
 
 
 gulp.task('default',
-	['index','include','style','component','img','watch']);
+	['index','include','style','component','img','favicon','watch']);
 
 
 gulp.task('watch',function(){
@@ -99,6 +99,12 @@ gulp.task('img',function(){
 		.pipe(imagemin())
 		.on('error' , errorLog )
 		.pipe(gulp.dest('./app/img/'));
+});
+gulp.task('favicon',function(){
+	return gulp.src('./favicon.ico')
+		.pipe(imagemin())
+		.on('error' , errorLog )
+		.pipe(gulp.dest('./app/'));
 });
 
 /* other function */
