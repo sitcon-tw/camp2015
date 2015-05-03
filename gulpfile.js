@@ -103,21 +103,6 @@ gulp.task('img',function(){
 		.pipe(gulp.dest('./app/img/'));
 });
 
-/*
-* manifest for offline view
-*/
-gulp.task('manifest', function(){
-	gulp.src(['app/*','app/**/**/*'])
-		.pipe(manifest({
-			hash: true,
-			preferOnline: true,
-			network: ['http://*', 'https://*', '*'],
-			filename: 'app.manifest',
-			exclude: 'app.manifest'
-		}))
-		.pipe(gulp.dest('app'));
-});
-
 /* other function */
 function errorLog(error){
 	console.log(error);

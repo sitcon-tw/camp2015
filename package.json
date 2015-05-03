@@ -25,7 +25,6 @@
     "react": "^0.12.2",
     "browserify": "^8.0.3",
     "reactify": "^0.17.1",
-    "gulp-manifest": "^0.0.6",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
     "browser-sync": "^1.8.2"
