@@ -5,6 +5,7 @@ $coverPagePropotion: 1440/900;
 	position: relative;
 	width: 100%;
 	height: 100%;
+	background-color: $darkBlack;
 }
 
 .coverPage{
@@ -13,6 +14,7 @@ $coverPagePropotion: 1440/900;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
+	top: -60px;
 
 	.bg{
 		display: block;
@@ -48,5 +50,26 @@ $coverPagePropotion: 1440/900;
 			transform-style: preserve-3d;
 			transform: translate(40%, -51%);
 		}
+	}
+
+	$propotion: 900/1440;
+	$mediaWidth: 1440px;
+	@while $mediaWidth > 400px{
+		
+		@media screen and (max-width: $mediaWidth)
+						  and (min-height: $mediaWidth * $propotion){
+			.front{
+				img{
+					@include middleCenter();
+					width: 100%;
+				}
+			}
+			.role{
+				.boy{ width: 17% * 100 / 80; }
+				.girl{ width: 22% * 100 / 80; }
+			}
+		}
+
+		$mediaWidth: $mediaWidth - 200px;
 	}
 }

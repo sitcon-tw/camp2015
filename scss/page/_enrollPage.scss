@@ -12,6 +12,19 @@ $colNum: 5;
 		text-align: center;
 		margin-bottom: .5em;
 	}
+	.tmpContent{
+		height: 12em;
+
+		strong{
+			display: block;
+			text-align: center;
+			margin-top: 1em;
+
+			&:nth-child(2){
+				margin-top: 3em;
+			}
+		}
+	}
 	.row{
 		display: block;
 		width: 100%;

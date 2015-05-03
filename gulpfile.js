@@ -8,6 +8,7 @@ var concat = require('gulp-concat'),
 	 htmlmin = require('gulp-htmlmin'),
 	 autoprefixer = require('gulp-autoprefixer'),
 	 reactify = require('reactify'),
+	 manifest = require('gulp-manifest'),
 	 source = require('vinyl-source-stream'),
 	 buffer = require('vinyl-buffer'),
 	 browserify = require('browserify'),
@@ -31,6 +32,7 @@ gulp.task('watch',function(){
 	gulp.watch( './include/*.js',['include',reload]);
 	gulp.watch( './scss/**/*.scss' ,['style',reload]);
 	gulp.watch( './react/**/*.jsx' ,['component',reload]);
+	gulp.watch( './app/*' ,['manifest']);
 });
 
 /*
@@ -99,6 +101,21 @@ gulp.task('img',function(){
 		.pipe(imagemin())
 		.on('error' , errorLog )
 		.pipe(gulp.dest('./app/img/'));
+});
+
+/*
+* manifest for offline view
+*/
+gulp.task('manifest', function(){
+	gulp.src(['app/*','app/**/**/*'])
+		.pipe(manifest({
+			hash: true,
+			preferOnline: true,
+			network: ['http://*', 'https://*', '*'],
+			filename: 'app.manifest',
+			exclude: 'app.manifest'
+		}))
+		.pipe(gulp.dest('app'));
 });
 
 /* other function */

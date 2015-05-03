@@ -27,11 +27,11 @@ var paywayParagraphs = [
 	" ",
 	"$ 本次營隊報名採用KKTIX <a>詳細報名流程</a>",
 	"$ <div class='registBlock'>\
-			<a class='regist1'>\
+			<a class='regist1' href='sitcon.kktix.cc/events/camp-2015-first-1'>\
 				<p>我要報名第一梯次</p>\
 				<p>07.20 ~ 07.23</p>\
 			</a>\
-			<a class='regist2'>\
+			<a class='regist2' href='sitcon.kktix.cc/events/camp-2015-second-1'>\
 				<p>我要報名第二梯次</p>\
 				<p>08.03 ~ 08.06</p>\
 			</a>\

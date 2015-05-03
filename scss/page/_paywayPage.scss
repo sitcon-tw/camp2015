@@ -60,6 +60,9 @@
 			display: block;
 			width: 100%;
 			text-align: center;
+			a{
+				text-decoration: none;
+			}
 			
 			.regist1 , .regist2{
 				transition: opacity 500ms ease-in-out;
