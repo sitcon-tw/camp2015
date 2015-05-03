@@ -1,60 +1,12 @@
 
-#coursePage .studentFeedback{
-	position: relative;
-	width: 100%;
-	margin-top: 4em;
-
-	.studentFeedbackBlock{
-		@include fontArticle();
-		display: inline-block;
-		width: 30%;
-		vertical-align: top;
-		color: $lightText;
-
-		padding-left: 2%;
-		&:not(:first-child){
-			margin-left: 1%;
-			border-left: 1px solid #aaa;
-		}
-
-		h2{
-			@include fontArticle();
-			font-weight: 100;
-
-			strong{
-				color: $lightBlue;
-				font-weight: 900;
-			}
-			span{ color: $lightText; }
-		}
-
-		.articleBlock{
-			font-size: .9em;
-			p{
-				line-height: 1.8em;
-			}
-		}
-
-		@media screen and (max-width: 1400px){
-			display: block;
-			width: 90%;
-			margin: 0 auto;
-
-			&:not(:first-child){
-				margin-top: 2em;
-				margin-left: auto;
-				margin-right: auto;
-				border-left: 0;
-			}
-		}
-	}
-}
-
 #staffPage .studentFeedback{
 	width: 60%;
 	margin: 0 auto;
-	margin-top: -140px;
 	padding-bottom: 280px;
+
+	&>h2{
+		@include fontTitle();
+	}
 
 	.studentFeedbackBlock{
 		@include fontArticle();
@@ -64,7 +16,7 @@
 		color: $darkText;
 
 		padding-left: 2%;
-		&:not(:first-child){
+		&:not(:nth-child(2)){
 			margin-left: 1%;
 			border-left: 1px solid #aaa;
 		}

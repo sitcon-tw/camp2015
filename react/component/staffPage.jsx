@@ -36,7 +36,7 @@ var Article = require('../partial/article.jsx');
 
 var feedbackData = [
 	{
-		title:"哲安" , subtitle:"（本屆夏令營課程長）" , 
+		title:"ZAL" , subtitle:"（本屆夏令營課程長）" , 
 		content:["在我來看，無疑去年夏令營是辦得相當成功的，有人藉此認識了社群、有人開始積極參與社群活動，這些都在在證明這點。但是去年身為學員，總覺得有些地方還可以做得更好，於是今年趁著機會加入籌備團隊，目的要讓學員取得比去年更棒的體驗與享受。" ]
 	},
 	{
@@ -65,6 +65,7 @@ var StudentFeedback = React.createClass({
 		});
 		return (
 			<div className="studentFeedback">
+				<h2>{"去年學員心得"}</h2>
 				{allFeedbacks}
 			</div>
 		);
