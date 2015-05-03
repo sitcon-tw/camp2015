@@ -55,6 +55,15 @@
 			width: 33%;
 			text-align: center;
 			vertical-align: top;
+
+			@media screen and (max-width: 900px){
+				display: block;
+				width: 100%;
+
+				&:not(:first-child){
+					margin-top: 2em;
+				}
+			}
 		}
 		p{
 			text-align: center;
