@@ -1,0 +1,37 @@
+CACHE MANIFEST
+
+
+CACHE:
+component.js
+index.html
+plugin.js
+style.css
+img/background.png
+img/boy.png
+img/btn.png
+img/girl.png
+img/headerBoy.png
+img/headerGirl.png
+img/logo.png
+img/mid.png
+img/top.png
+img/logos/blackLogo.png
+img/logos/gitcafeLogo.jpg
+img/logos/mozilaLogo.png
+img/logos/muzikLogo.png
+img/logos/openfoundLogo.png
+img/logos/pixnetLogo.png
+img/logos/sitconLogo.png
+img/logos/tenlonLogo.PNG
+
+
+NETWORK:
+http://*
+https://*
+*
+
+
+SETTINGS:
+prefer-online
+
+# hash: fc7c916d6dbb2d82b819127c27a4c725df524199b7b7d245bcce0234f5a0dd36
