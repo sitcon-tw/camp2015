@@ -44,15 +44,30 @@ var feedbackData = [
 		content:["去年的 SITCON 夏令營 是我真正開始認識並參與開源社群活動的開始，在活動中也學到了很多，更重要的是認識了許多來自 SITCON 的朋友們。在之後，我有幸可以參與到很多不同的社群活動/研討會，覺得自己應該要開始真正做出貢獻，因此順勢加入了今年的夏令營籌備團隊，希望能把夏令營辦個更好，帶領更多人接觸開源社群的世界。"]
 	},
 	{
-		title:"Penny" , subtitle:"" ,
-		content:[""]
+		title:"Penny" , subtitle:"（本屆夏令營執行秘書）" ,
+		content:["猶記去年，仍為初學者的我，滿載而歸地離開了 SITCON 第一屆夏令營。今年，我滿載著熱沈，十分榮幸的參與了第二屆夏令營的籌備。廣拓了視野，亦學習了許多，深感自己成長了不少呢！期盼這幾個月的努力，能使我們第二屆成員再度收益良多。"]
 	}
 ];
 var StudentFeedback = React.createClass({
+	getDefaultProps: function(){
+		return { calledAnimation: false };
+	},
+	componentDidMount: function(){
+		window.addEventListener('scroll', this.checkReached, false);
+	},
+	checkReached: function(){
+		if( !ruler.haveReaching( this.getDOMNode() ) )
+			return;
+		if( this.props.calledAnimation )
+			return;
+		this.props.calledAnimation = true;
+		window.removeEventListener('scroll', this.checkReached, false);
+		studentFeedbackAnimation();
+	},
 	render: function() {
 		var allFeedbacks = this.props.feedbackData.map(function(data,cnt){
 			return(
-				<div className="studentFeedbackBlock" key={cnt}>
+				<div className="studentFeedbackBlock slideInUpPre" key={cnt}>
 					<h2>
 						<strong>{data.title}</strong>
 						<span>{data.subtitle}</span>
@@ -80,7 +95,7 @@ var StaffPage = React.createClass({
 		window.addEventListener('scroll', this.checkReached, false);
 	},
 	checkReached: function(){
-		if( !ruler.haveReached( this.getDOMNode() ) )
+		if( !ruler.haveReaching( this.getDOMNode() ) )
 			return;
 		if( this.props.calledAnimation )
 			return;
@@ -115,7 +130,18 @@ React.render(
 );
 
 function staffPageAnimation(){
-	var slideInUp = document.querySelectorAll('#staffPage .row');
+	var slideInUp = document.querySelectorAll('#staffPage .staffPage .slideInUpPre');
+	for(var i=0 ; i<slideInUp.length ; ++i){
+		slideInUp[i].className = slideInUp[i].className + 
+			" delay" + (i);
+	}
+	for(var i=0 ; i<slideInUp.length ; ++i)
+		slideInUp[i].className = slideInUp[i].className + " slideInUp";
+	slideInUp = null;
+}
+
+function studentFeedbackAnimation(){
+	var slideInUp = document.querySelectorAll('#staffPage .studentFeedback .slideInUpPre');
 	for(var i=0 ; i<slideInUp.length ; ++i){
 		slideInUp[i].className = slideInUp[i].className + 
 			" delay" + (i);

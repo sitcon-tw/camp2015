@@ -13,6 +13,7 @@
 
 	a{
 		color: $darkBlue;
+		underline: none;
 	}
 
 	.paywayArticle{
@@ -21,6 +22,9 @@
 			@include fontArticle();
 			padding-top: .5em;
 
+			a{
+				text-decoration: none;
+			}
 			a:hover{
 				text-decoration: underline;
 			}
@@ -53,6 +57,9 @@
 				@include fontArticle();
 				line-height: 1.6em;
 				padding-top: .8em;
+				a{
+					text-decoration: none;
+				}
 			}
 		}
 
@@ -65,11 +72,11 @@
 			}
 			
 			.regist1 , .regist2{
-				transition: opacity 500ms ease-in-out;
+				transition: opacity 300ms linear;
 				width: 49%;
 				padding-top: .9em;
 				padding-bottom: .9em;
-				opacity: 1;
+				opacity: .8;
 				border-radius: 5px;
 				&:hover{
 					text-decoration: none;

@@ -35,7 +35,7 @@ var slideInMixins = {
 			return;
 		this.props.calledAnimation = true;
 		window.removeEventListener('scroll', this.checkReached, false);
-		this.getDOMNode().className +=  " " + animateApply;
+		this.getDOMNode().className +=  " slideIn";
 	}
 };
 
@@ -43,7 +43,7 @@ var AboutCamp = React.createClass({
 	mixins: [slideInMixins],
 	render: function(){
 		return (
-			<div className={"aboutCamp "+animateApply+"Pre"}>	
+			<div className={"aboutCamp slideInPre"}>	
 				<h2>{aboutCampText.title}</h2>
 				<Article>
 					{aboutCampText.content}
@@ -57,7 +57,7 @@ var AboutSitcon = React.createClass({
 	mixins:[slideInMixins],
 	render: function(){
 		return (
-			<div className={"aboutSitcon "+animateApply+"Pre"}>
+			<div className={"aboutSitcon slideInPre"}>
 				<h2>{aboutSitconText.title}</h2>
 				<Article>
 					{aboutSitconText.content}
@@ -81,7 +81,7 @@ var AboutDetail = React.createClass({
 			);
 		})
 		return (
-			<div className={"aboutDetail "+animateApply+"Pre"}>
+			<div className={"aboutDetail slideInPre"}>
 				{allDetail}
 			</div>
 		);
@@ -106,13 +106,3 @@ React.render(
 	<AboutPage />,
 	document.getElementById('aboutPage')
 );
-
-
-function aboutPageAnimation(){
-	var delay = 100;
-	var slideIn = document.querySelectorAll('#aboutPage .'+animateApply+'Pre');
-	for(var i=0 ; i<slideIn.length ; ++i){
-		slideIn[i].className = slideIn[i].className + " " + animateApply;
-	}
-	slideIn = null;
-}

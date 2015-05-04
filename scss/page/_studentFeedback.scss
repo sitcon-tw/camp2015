@@ -3,6 +3,8 @@
 	width: 60%;
 	margin: 0 auto;
 	padding-bottom: 280px;
+	margin-top: -100px;
+	color: $darkText;
 
 	&>h2{
 		@include fontTitle();
@@ -13,7 +15,6 @@
 		display: inline-block;
 		width: 30%;
 		vertical-align: top;
-		color: $darkText;
 
 		padding-left: 2%;
 		&:not(:nth-child(2)){
@@ -29,7 +30,6 @@
 				color: $lightBlue;
 				font-weight: 900;
 			}
-			span{ color: $darkText; }
 		}
 
 		.articleBlock{
