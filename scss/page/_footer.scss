@@ -6,10 +6,6 @@
 	color: $darkText;
 	padding: 2em;
 
-	display: block;
-	width: 60%;
-	margin: 0 auto;
-
 	footer{
 		display: block;
 		font-size: 16px;
@@ -17,9 +13,12 @@
 	}
 
 	.followUs{
+		display: block;
 		font-size: 14px;
 		margin-top: 1em;
 		text-align: center;
+		padding-left: .5em;
+		padding-right: .5em;
 
 		a{
 			text-decoration: none;
@@ -29,6 +28,7 @@
 			margin-left: 1em;
 			margin-right: 1em;
 			transition: box-shadow 300ms linear;
+			margin-top: 1em;
 
 			&:hover{
 				box-shadow: 0 0 10px #333 inset;
