@@ -26,10 +26,10 @@ var BarResponsive = React.createClass({
 	},
 	open: function(){
 		if( ruler.getScrollY() < 
-				ruler.getHeight( document.getElementById('coverPage') )-60
+				ruler.getTopY( document.getElementById('navbar') )-60
 				){
 			$('html,body').animate({
-				scrollTop: document.getElementById('coverPage') )-60 )
+				scrollTop: ruler.getTopY( document.getElementById('navbar') )-60
 			} , 1000);
 		}
 		$('.barButtonBlock').css('display','block');
