@@ -32,6 +32,16 @@
 			}
 		}
 
+		@media screen and (max-width: 400px){
+			.partIn{
+				width: 240px;
+				height: 180px;
+			}
+			.groupHeader{
+				width: 240px;
+			}
+		}
+
 	}
 
 	$red: $darkRed;

@@ -25,6 +25,13 @@ var BarResponsive = React.createClass({
 		this.getDOMNode().removeEventListener('click', this.open , false);
 	},
 	open: function(){
+		if( ruler.getScrollY() < 
+				ruler.getHeight( document.getElementById('coverPage') )-60
+				){
+			$('html,body').animate({
+				scrollTop: document.getElementById('coverPage') )-60 )
+			} , 1000);
+		}
 		$('.barButtonBlock').css('display','block');
 		var that = this;
 		setTimeout( function(){
