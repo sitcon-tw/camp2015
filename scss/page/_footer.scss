@@ -1,13 +1,38 @@
 
 #footer{
 
+	font-family: $gothic;
 	background-color: $darkBg;
 	color: $darkText;
 	padding: 2em;
+
+	display: block;
+	width: 60%;
+	margin: 0 auto;
 
 	footer{
 		display: block;
 		font-size: 16px;
 		text-align: center;
+	}
+
+	.followUs{
+		font-size: 14px;
+		margin-top: 1em;
+		text-align: center;
+
+		a{
+			text-decoration: none;
+			display: inline-block;
+			padding: .3em 1em;
+			border: 1px #666 solid;
+			margin-left: 1em;
+			margin-right: 1em;
+			transition: box-shadow 300ms linear;
+
+			&:hover{
+				box-shadow: 0 0 10px #333 inset;
+			}
+		}
 	}
 }
