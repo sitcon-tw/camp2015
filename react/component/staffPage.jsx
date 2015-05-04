@@ -1,10 +1,10 @@
 
 var staffTaChi = [
 	[
-		"總召組" , "崑元、Clarence"
+		"總召組" , "崑元、Clarence、Penny"
 	],
 	[
-		"行政組" , "PineApple、零葉、Penny、阿威"
+		"行政組" , "PineApple、零葉、阿威"
 	],
 	[
 		"行銷組" , "小燁、Mouse、蝦子"

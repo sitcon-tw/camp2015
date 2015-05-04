@@ -8,7 +8,7 @@ var barContent = [
 	{ page:"錄取", dest:"enrollPage" },
 	{ page:"報名", dest:"paywayPage" },
 	{ page:"課程", dest:"coursePage" },
-	{ page:"員工", dest:"staffPage" },
+	{ page:"工作團隊", dest:"staffPage" },
 	{ page:"贊助", dest:"sponsorPage" }
 ];
 

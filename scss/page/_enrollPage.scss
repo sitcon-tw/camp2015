@@ -17,11 +17,17 @@ $colNum: 5;
 
 		strong{
 			display: block;
-			text-align: center;
-			margin-top: 1em;
-
-			&:nth-child(2){
-				margin-top: 3em;
+			text-align: left;
+			text-indent: 2em;
+			padding-right: 1em;
+			color: $darkGray;
+			font-weight: 100;
+			@include fontArticle();
+			@media screen and (max-width: 800px){
+				width: 90%;
+				padding-right: 0;
+				margin-left: auto;
+				margin-right: auto;
 			}
 		}
 	}

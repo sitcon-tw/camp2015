@@ -1,20 +1,16 @@
 
 var partIn = [
 	{group:"主辦單位",applyClass:"mainPart",parts:[
-		{name:"學生計算機年會",logo:"sitconLogo.png"},
-		{name:"中研院・資創中心・自由軟體鑄造場",logo:"openfoundLogo.png"}
+		{name:"學生計算機年會",logo:"sitconLogo.png"}
 	]},
-	{group:"協辦單位",applyClass:"secondPart",parts:[
-		{name:"政治大學資訊科學系",logo:"blackLogo.png"}
-	]},
+	{group:"共同主辦",applyClass:"secondPart",parts:[
+		{name:"開放文化基金會",logo:"OCFLogo.png"},
+		{name:"聖約翰科技大學",logo:"SJULogo.png"}
+	]}/*,
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
-		{name:"PIXNET DIGITAL MEDIA",logo:"pixnetLogo.png"}
 	]},
 	{group:"贊助單位",applyClass:"sponsorPart",parts:[
-		{name:"MUZIK ONLINE",logo:"muzikLogo.png"},
-		{name:"天瓏資訊圖書",logo:"tenlonLogo.PNG"},
-		{name:"GitCafe",logo:"gitcafeLogo.jpg"}
-	]}
+	]}*/
 ];
 
 var React = require('react');
@@ -26,6 +22,7 @@ var popInMixins = {
 	},
 	componentDidMount: function(){
 		window.addEventListener('scroll', this.checkReached, false);
+		window.addEventListener('load', this.loadPic, false);
 	},
 	checkReached: function(){
 		if( !ruler.haveReaching( this.getDOMNode() ) )
@@ -35,6 +32,11 @@ var popInMixins = {
 		this.props.calledAnimation = true;
 		window.removeEventListener('scroll', this.checkReached, false);
 		this.getDOMNode().className +=  " popIn";
+	},
+	loadPic: function(){
+		window.removeEventListener('scroll', this.loadPic, false);
+		this.refs.logoImg.getDOMNode().src = 
+			this.refs.logoImg.props.dataSrc;
 	}
 };
 
@@ -43,7 +45,7 @@ var PartIn = React.createClass({
 	render: function() {
 		return (
 			<div className={"partIn popInPre "+this.props.colorPick}>
-				<img src={"img/logos/"+this.props.detail.logo} />
+				<img src="" ref="logoImg" dataSrc={"img/logos/"+this.props.detail.logo} />
 				<div className="partInName">
 					<strong>{this.props.detail.name}</strong>
 					<div className="partInNameBg"></div>
