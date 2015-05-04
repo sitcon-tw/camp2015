@@ -55,6 +55,7 @@ var CoursePage = React.createClass({
 			<div className="coursePage pageContainer">
 				<h2>課 程</h2>
 				<Timetable content={timetableContent} />
+				<div className="comingSoon">Coming Soon...</div>
 			</div>
 		);
 	}

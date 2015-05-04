@@ -24,6 +24,16 @@
 		border-spacing: 0px;
 		border: 0px;
 		width: 100%;
+		opacity: .3;
+	}
+	.comingSoon{
+		@include fontTitle();
+		color: $lightText;
+		font-weight: 900;
+		width: 100%;
+		text-align: center;
+		display: block;
+		@include middleCenter();
 	}
 
 	tr{
