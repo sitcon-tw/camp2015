@@ -38,7 +38,7 @@ gulp.task('watch',function(){
 */
 gulp.task('index',function(){
 	return gulp.src( './index.html' )
-		.pipe(htmlmin({collapseWhitespace:true}))
+		.pipe(htmlmin({collapseWhitespace:false}))
 		.pipe(gulp.dest('./app/'));
 });
 
