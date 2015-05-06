@@ -64,7 +64,30 @@ $coverPagePropotion: 1440/900;
 		}
 	}
 		
-	@media screen and (min-aspect-ratio: 1440/840){
+	@media screen and (min-aspect-ratio: 1440/840) and (max-height: 800px){
+		top: 0px;
+
+		.front{
+			img{
+				height: 100%;
+				width: auto;
+			}
+		}
+		.role{
+			.boy{
+				height: 61%;
+				width: auto;
+			}
+			.girl{
+				height: 57%;
+				width: auto;
+			}
+		}
+	}
+		
+	@media screen and (min-aspect-ratio: 1440/840) and (max-height: 600px){
+		top: -30px;
+
 		.front{
 			img{
 				height: 70%;
