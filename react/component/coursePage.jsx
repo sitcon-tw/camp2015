@@ -10,19 +10,17 @@ var timetableContent = [
 	[
 		{t:["08:30","~","09:30"]},
 		{t:["開始報到"],type:"easy"},
-		{t:["社群精神"],type:"course"},
+		{t:["web"],type:"course",r:3},
 		{t:["WEB"],type:"course",r:3},
 		{t:["視界咖啡館"],type:"activity",r:3}
 	],
 	[
 		{t:["09:30","~","10:30"]},
-		{t:["開幕式"],type:"easy"},
-		{t:["SITCON心路歷程"],type:"course"}
+		{t:["開幕式"],type:"easy"}
 	],
 	[
 		{t:["10:30","~","12:00"]},
-		{t:["小隊破冰"],type:"activity"},
-		{t:["贊助議程"],type:"course"}
+		{t:["小隊破冰"],type:"activity"}
 	],
 	[
 		{t:["12:00","~","13:30"]},
@@ -30,15 +28,20 @@ var timetableContent = [
 		{t:["午餐"],type:"easy"}
 	],
 	[
-		{t:["13:30","~","15:00"]},
-		{t:["Git"],type:"course",r:2},
-		{t:["Web"],type:"course",r:2},
-		{t:["Security（資安）"],type:"course",r:2},
+		{t:["13:30","~","14:30"]},
+		{t:["Git"],type:"course",r:3},
+		{t:["社群精神"],type:"course"},
+		{t:["Security（資安）"],type:"course",r:3},
 		{t:["社群闖關"],type:"activity"}
 	],
 	[
-		{t:["15:00","~","17:00"]},
-		{t:["hackathon發表","故事時間"],type:"activity"}
+		{t:["14:30","~","15:30"]},
+		{t:["SITCON心路歷程"],type:"course"},
+		{t:["hackathon發表","故事時間"],type:"activity",r:2}
+	],
+	[
+		{t:["15:30","~","17:00"]},
+		{t:["贊助議程"],type:"course"},
 	],
 	[
 		{t:["17:00","~","18:30"]},

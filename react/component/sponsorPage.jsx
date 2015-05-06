@@ -4,8 +4,8 @@ var partIn = [
 		{name:"學生計算機年會",logo:"sitconLogo.png"}
 	]},
 	{group:"共同主辦",applyClass:"secondPart",parts:[
-		{name:"開放文化基金會",logo:"OCFLogo.png"},
-		{name:"聖約翰科技大學",logo:"SJULogo.png"}
+		{name:"開放文化基金會",logo:"OCFLogo.png",url:"http://ocf.tw/"},
+		{name:"聖約翰科技大學",logo:"SJULogo.png",url:"http://www.sju.edu.tw/"}
 	]}/*,
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
 	]},
@@ -45,11 +45,13 @@ var PartIn = React.createClass({
 	render: function() {
 		return (
 			<div className={"partIn popInPre "+this.props.colorPick}>
-				<img src="" ref="logoImg" dataSrc={"img/logos/"+this.props.detail.logo} />
-				<div className="partInName">
-					<strong>{this.props.detail.name}</strong>
-					<div className="partInNameBg"></div>
-				</div>
+				<a target="_blank" href={this.props.detail.url}>
+					<img src="" ref="logoImg" dataSrc={"img/logos/"+this.props.detail.logo} />
+					<div className="partInName">
+						<strong>{this.props.detail.name}</strong>
+						<div className="partInNameBg"></div>
+					</div>
+				</a>
 			</div>
 		);
 	}
