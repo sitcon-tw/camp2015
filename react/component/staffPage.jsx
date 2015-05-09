@@ -48,6 +48,7 @@ var feedbackData = [
 		content:["猶記去年，仍為初學者的我，滿載而歸地離開了 SITCON 第一屆夏令營。今年，我滿載著熱沈，十分榮幸的參與了第二屆夏令營的籌備。廣拓了視野，亦學習了許多，深感自己成長了不少呢！期盼這幾個月的努力，能使我們第二屆成員再度收益良多。"]
 	}
 ];
+
 var StudentFeedback = React.createClass({
 	getDefaultProps: function(){
 		return { calledAnimation: false };
@@ -95,7 +96,7 @@ var StaffPage = React.createClass({
 		window.addEventListener('scroll', this.checkReached, false);
 	},
 	checkReached: function(){
-		if( !ruler.haveReaching( this.getDOMNode() ) )
+		if( !ruler.haveReaching( this.refs.inAnchor.getDOMNode() ) )
 			return;
 		if( this.props.calledAnimation )
 			return;
@@ -109,13 +110,11 @@ var StaffPage = React.createClass({
 			<div className="staffPage pageContainer">
 				<div className="left">
 					<h2>工作團隊</h2>
-					<Table applyClass="staffPageTable" rowClass="slideInUpPre">
+					<Table applyClass="staffPageTable" rowClass="slideInUpPre"  ref="inAnchor">
 						{staffTaChi}
 					</Table>
 					<img src={"img/boy.png"} />
 				</div>
-
-				
 			</div>
 
 			<StudentFeedback feedbackData={feedbackData}/>
@@ -129,7 +128,10 @@ React.render(
 	document.getElementById('staffPage')
 );
 
+var staffPageAnimateOk = false;
+
 function staffPageAnimation(){
+	setTimeout( function(){ staffPageAnimateOk = true } , 800 );
 	var slideInUp = document.querySelectorAll('#staffPage .staffPage .slideInUpPre');
 	for(var i=0 ; i<slideInUp.length ; ++i){
 		slideInUp[i].className = slideInUp[i].className + 
@@ -141,12 +143,20 @@ function staffPageAnimation(){
 }
 
 function studentFeedbackAnimation(){
+	if( !staffPageAnimateOk ){
+		setTimeout( function(){ studentFeedbackAnimation(); } , 100 );
+		return;
+	}
 	var slideInUp = document.querySelectorAll('#staffPage .studentFeedback .slideInUpPre');
 	for(var i=0 ; i<slideInUp.length ; ++i){
 		slideInUp[i].className = slideInUp[i].className + 
-			" delay" + (i);
+			" delay" + (i*3);
 	}
 	for(var i=0 ; i<slideInUp.length ; ++i)
 		slideInUp[i].className = slideInUp[i].className + " slideInUp";
-	slideInUp = null;
+	setTimeout( function(){
+		for(var i=0 ; i<slideInUp.length ; ++i)
+			slideInUp[i].className = slideInUp[i].className + " borderShow";
+		slideInUp = null;
+	} ,600 );
 }

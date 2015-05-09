@@ -27,15 +27,6 @@
 		width: 100%;
 		//opacity: .3;
 	}
-	.comingSoon{
-		@include fontTitle();
-		color: $lightText;
-		font-weight: 900;
-		width: 100%;
-		text-align: center;
-		display: block;
-		@include middleCenter();
-	}
 
 	tr{
 
@@ -51,22 +42,22 @@
 			padding-top: .5em;
 			padding-bottom: .5em;
 
-			transition: background-color 500ms ease-in-out;
+			transition: background-color 300ms linear;
 
 			&.course{
 				color: $lightBlue;
-				cursor: pointer;
+				cursor: url(img/link.png) 10 10, alias;
 
 				&:hover{
-					background-color: $darkBlack;
+					background-color: #222;
 				}
 			}
 			&.activity{
 				color: $darkYellow;
-				cursor: pointer;
+				cursor: url(img/link.png) 10 10, alias;
 
 				&:hover{
-					background-color: $darkBlack;
+					background-color: #222;
 				}
 			}
 			&.easy{

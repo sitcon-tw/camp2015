@@ -50,6 +50,11 @@
 				margin-left: 2em;
 				border-left: 5px #aaa solid;
 			}
+
+			@media screen and (max-width: 500px){
+				&.left{ width: 30%; text-align: left; }
+				&.right{ width: 66%; }
+			}
 		}
 		ol{
 			padding-left: 3em;

@@ -10,7 +10,7 @@ var paywayParagraphs = [
 			補助辦法\
 		</span>\
 		<span class='right'>\
-			<a id='linkHelpFinancial' target='_blank' href='data/SITCONCamp2015helpFinanial.pdf'>報名費用補助辦法</a>\
+			<a id='linkHelpFinancial' target='_blank' href='http://sitcon.camp/2015/data/SITCONCamp2015helpFinanial.pdf'>報名費用補助辦法</a>\
 		</span>",
 	"$ <span class='left'>\
 			開放報名\
@@ -25,7 +25,7 @@ var paywayParagraphs = [
 			2015 . 05 . 30\
 		</span>",
 	" ",
-	"$ 本次營隊報名採用KKTIX <a id='linkDetailProc' target='_blank' href='data/SITCONCamp2015takePartIn.pdf'>詳細報名流程</a>",
+	"$ 本次營隊報名採用KKTIX <a id='linkDetailProc' target='_blank' href='http://sitcon.camp/2015/data/SITCONCamp2015takePartIn.pdf'>詳細報名流程</a>",
 	"$ <div class='registBlock'>\
 			<a target='_blank' class='regist1' href='http://sitcon.kktix.cc/events/camp-2015-first-1'>\
 				<p>我要報名第一梯次</p>\

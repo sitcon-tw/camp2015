@@ -10,7 +10,7 @@ var timetableContent = [
 	[
 		{t:["08:30","~","09:30"]},
 		{t:["開始報到"],type:"easy"},
-		{t:["web"],type:"course",r:3},
+		{t:["WEB"],type:"course",r:3},
 		{t:["WEB"],type:"course",r:3},
 		{t:["視界咖啡館"],type:"activity",r:3}
 	],

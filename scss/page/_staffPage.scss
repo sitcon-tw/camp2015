@@ -59,5 +59,19 @@
 			text-align: left;
 			vertical-align: top;
 		}
+		@media screen and (max-width: 500px){
+			margin-top: 2em;
+
+			.col{ display: block; }
+			.c0{
+				width: 100%;
+				text-align: center;
+			}
+			.c1{
+				width: 100%;
+				text-align: center;
+				margin-top: 1em;
+			}
+		}
 	}
 }

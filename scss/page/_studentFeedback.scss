@@ -19,7 +19,10 @@
 		padding-left: 2%;
 		&:not(:nth-child(2)){
 			margin-left: 1%;
-			border-left: 1px solid #aaa;
+			border-left: 1px solid $darkBg;
+		}
+		&.borderShow{
+			border-left-color: #666;
 		}
 
 		h2{

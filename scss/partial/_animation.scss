@@ -32,7 +32,8 @@ $bezierTime: cubic-bezier(.16 , .84 , .44 , 1);
 }
 .slideInUpPre{
 	transition: transform 600ms $bezierTime,
-					opacity 600ms $bezierTime;
+					opacity 600ms $bezierTime,
+					border-left-color 600ms $bezierTime;
 	transform: translateY(200%);
 	opacity: 0;
 }
