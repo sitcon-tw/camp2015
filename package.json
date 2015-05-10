@@ -1,16 +1,15 @@
 {
-  "name": "NCTUEOvolunteer",
+  "name": "SITCONCamp2015",
   "version": "0.0.1",
   "description": "",
-  "main": "coffeescripts/app.coffee",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sitcon-tw/2015.git"
+    "url": "https://github.com/sitcon-tw/camp2015"
   },
   "author": "sunset",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sunset1995/NCTUEOvolunteer.git"
+    "url": "https://github.com/sitcon-tw/camp2015.git"
   },
   "dependencies": {
     "gulp": "^3.8.10",
@@ -27,6 +26,8 @@
     "reactify": "^0.17.1",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0",
-    "browser-sync": "^1.8.2"
+    "browser-sync": "^1.8.2",
+    "object-assign": "^1.0.0",
+    "flux": "^2.0.1"
   }
 }

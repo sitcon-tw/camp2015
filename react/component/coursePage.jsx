@@ -10,8 +10,8 @@ var timetableContent = [
 	[
 		{t:["08:30","~","09:30"]},
 		{t:["開始報到"],type:"easy"},
-		{t:["WEB"],type:"course",r:3},
-		{t:["WEB"],type:"course",r:3},
+		{t:["WEB"],type:"course",r:3,l:"web"},
+		{t:["WEB"],type:"course",r:3,l:"web"},
 		{t:["視界咖啡館"],type:"activity",r:3}
 	],
 	[
@@ -61,12 +61,10 @@ var timetableContent = [
 ];
 
 var React = require('react');
+var CourseStore = require('../stores/courseStore.jsx');
 var Timetable = require('../partial/timetable.jsx');
 
 var CoursePage = React.createClass({
-	/*
-				<div className="comingSoon">Coming Soon...</div>
-	*/
 	render: function(){
 		return (
 			<div className="coursePage pageContainer">
@@ -80,4 +78,51 @@ var CoursePage = React.createClass({
 React.render(
 	<CoursePage />,
 	document.getElementById('coursePage')
+);
+
+
+
+
+function getCoursePanelState(){
+	return {
+		pageData: CourseStore.nowCourse(),
+		showmode: CourseStore.nowShow()
+	};
+}
+
+var CoursePanel = React.createClass({
+	getInitialState: function(){
+		return getCoursePanelState();
+	},
+	componentDidMount: function() {
+		CourseStore.addShowListener(this.showPanel);
+		CourseStore.addCloseListener(this.closePanel);
+	},
+	componentWillUnmount: function() {
+		CourseStore.removeShowListener(this.showPanel);
+		CourseStore.removeCloseListener(this.closePanel);
+	},
+	render: function(){
+		return (
+			<div className="coursePanel">
+				<div className="panelClose">X</div>
+				<img className="panelCover" src="img/infoCover.png"></img>
+				{this.state.pageData}
+			</div>
+		);
+	},
+	showPanel: function(){
+		this.setState( getCoursePanelState() );
+		// show animation
+		document.getElementById('coursePanel').style.top = "0";
+	},
+	closePanel: function(){
+		//close animate
+		document.getElementById('coursePanel').style.top = "100%";
+	}
+});
+
+React.render(
+	<CoursePanel />,
+	document.getElementById('coursePanel')
 );

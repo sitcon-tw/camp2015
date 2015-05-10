@@ -1,0 +1,89 @@
+
+#coursePanel{
+
+	color: $darkText;
+	font-family: $gothic;
+
+	display: block;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 99999;
+	overflow-x: hidden;
+	background-color: #333;
+	background-color: rgba(51, 51, 51, 0.92);
+	color: #ccc;
+
+	.coursePanel{
+
+		position: relative;
+		width: 700px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2em;
+		margin-bottom: 2em;
+
+		padding-top: 2em;
+		padding-bottom: 2em;
+		background-color: $darkBg;
+		border-radius: 2em;
+		h2{
+			@include fontSmalltitle(); 
+			color: $lightBlue;
+		}
+		p{
+			@include fontArticle();
+			line-height: 1.5em;
+			text-indent: 2em;
+		}
+
+		.panelCover{
+			width: 100%;
+		}
+		.panelClose{
+			display: inline-block;
+			position: absolute;
+			font-size: 20px;
+			width: 20px;
+			height: 20px;
+			top: -10px;
+			right: -10px;
+		}
+		.title{
+			@include fontSubtitle();
+			position: relative;
+			z-index: 100;
+			display: inline-block;
+			left: -.3em;
+			font-weight: 900;
+			color: $smokeWhite;
+			margin-top: .5em;
+			margin-bottom: 1em;
+
+			&:before{
+				content: " ";
+				display: block;
+				position: absolute;
+				z-index: -1;
+				bottom: 0;
+				width: 120%;
+				height: 100%;
+				background-color: $darkRed;				
+				transform-style: preserve-3d;
+				transform-origin: left bottom;
+				transform: skewX(15deg);
+			}
+		}
+		.infoRow{
+			margin-left: 1.5em;
+			margin-top: 1em;
+			margin-right: 1em;
+			border-left: 5px solid $lightBlue;
+			padding-left: .5em;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+		}
+	}
+}
