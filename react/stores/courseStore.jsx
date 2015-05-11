@@ -1,11 +1,15 @@
 
+var React = require('react');
 
 var Dispatcher = require('../dispatcher.jsx');
 var EventEmitter = require('events').EventEmitter;
 var assign = require('object-assign');
 
 var courses = {
-	web: require('./courseWeb.jsx')
+	git: require('./courseGit.jsx'),
+	web: require('./courseWeb.jsx'),
+	community: require('./courseCommunity.jsx'),
+	security: require('./courseSecurity.jsx')
 };
 var modeShow = false;
 var nowWhich = "web";

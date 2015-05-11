@@ -46,7 +46,6 @@
 
 			&.course{
 				color: $lightBlue;
-				cursor: url(img/link.png) 10 10, alias;
 
 				&:hover{
 					background-color: #222;
@@ -54,11 +53,13 @@
 			}
 			&.activity{
 				color: $darkYellow;
-				cursor: url(img/link.png) 10 10, alias;
 
 				&:hover{
 					background-color: #222;
 				}
+			}
+			&.link{
+				cursor: url(img/link.png) 10 10, alias;
 			}
 			&.easy{
 				background-color: $darkGray;

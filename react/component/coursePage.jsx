@@ -29,14 +29,14 @@ var timetableContent = [
 	],
 	[
 		{t:["13:30","~","14:30"]},
-		{t:["Git"],type:"course",r:3},
-		{t:["社群精神"],type:"course"},
-		{t:["Security（資安）"],type:"course",r:3},
+		{t:["Git"],type:"course",r:3,l:"git"},
+		{t:["社群精神"],type:"course",l:"community"},
+		{t:["Security（資安）"],type:"course",r:3,l:"security"},
 		{t:["社群闖關"],type:"activity"}
 	],
 	[
 		{t:["14:30","~","15:30"]},
-		{t:["SITCON心路歷程"],type:"course"},
+		{t:["SITCON 故事館"],type:"course"},
 		{t:["hackathon發表","故事時間"],type:"activity",r:2}
 	],
 	[
@@ -104,21 +104,25 @@ var CoursePanel = React.createClass({
 	},
 	render: function(){
 		return (
-			<div className="coursePanel">
-				<div className="panelClose">X</div>
-				<img className="panelCover" src="img/infoCover.png"></img>
-				{this.state.pageData}
+			<div className="coursePanel darken">
+				<div className="relative">
+					<img className="panelClose" src="img/close.png"
+						  onClick={this.closePanel} />
+					<img className="panelCover" src="img/infoCover.png" />
+					{this.state.pageData}
+				</div>
+				<div className="closeArea" onClick={this.closePanel}></div>
 			</div>
 		);
 	},
 	showPanel: function(){
 		this.setState( getCoursePanelState() );
-		// show animation
-		document.getElementById('coursePanel').style.top = "0";
+		document.getElementById('coursePanel').style.display = "block";
+		document.body.style.overflowY = "hidden";
 	},
 	closePanel: function(){
-		//close animate
-		document.getElementById('coursePanel').style.top = "100%";
+		document.getElementById('coursePanel').style.display = "none";
+		document.body.style.overflowY = "auto";
 	}
 });
 

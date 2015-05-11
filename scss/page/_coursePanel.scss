@@ -4,26 +4,32 @@
 	color: $darkText;
 	font-family: $gothic;
 
-	display: block;
+	display: none;
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	min-height: 100%;
+	height: 100%;
+	padding-bottom: 2em;
 	z-index: 99999;
+	overflow-y: scroll;
 	overflow-x: hidden;
 	background-color: #333;
-	background-color: rgba(51, 51, 51, 0.92);
+	background-color: rgba(0,0,0,.8);
 	color: #ccc;
 
 	.coursePanel{
 
-		position: relative;
 		width: 700px;
 		margin-left: auto;
 		margin-right: auto;
-		margin-top: 2em;
+		margin-top: 4em;
 		margin-bottom: 2em;
+		padding-bottom: 2em;
+
+		@media screen and (max-width: 720px){
+			width: 90%;
+		}
 
 		padding-top: 2em;
 		padding-bottom: 2em;
@@ -42,38 +48,55 @@
 		.panelCover{
 			width: 100%;
 		}
+		.closeArea{
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: -1;
+		}
 		.panelClose{
 			display: inline-block;
 			position: absolute;
-			font-size: 20px;
-			width: 20px;
-			height: 20px;
-			top: -10px;
-			right: -10px;
+			width: 25px;
+			height: 25px;
+			top: -2.5em;
+			right: -5px;
+			cursor: pointer;
+			opacity: .9;
+			&:hover{
+				opacity: 1;
+			}
+		}
+		.courseContent{
+			position: relative;
+			margin-top: 1em;
 		}
 		.title{
 			@include fontSubtitle();
-			position: relative;
+			position: absolute;
 			z-index: 100;
 			display: inline-block;
-			left: -.3em;
+			right: 0;
+			top: -1em;
 			font-weight: 900;
 			color: $smokeWhite;
-			margin-top: .5em;
-			margin-bottom: 1em;
 
 			&:before{
 				content: " ";
 				display: block;
 				position: absolute;
 				z-index: -1;
-				bottom: 0;
-				width: 120%;
-				height: 100%;
+				bottom: -10%;
+				left: -25%;
+				width: 135%;
+				height: 120%;
 				background-color: $darkRed;				
 				transform-style: preserve-3d;
 				transform-origin: left bottom;
-				transform: skewX(15deg);
+				transform: skewX(-15deg);
 			}
 		}
 		.infoRow{
@@ -84,6 +107,14 @@
 			padding-left: .5em;
 			border-top-left-radius: 5px;
 			border-bottom-left-radius: 5px;
+
+			&:not(:nth-child(2)){
+				margin-top: 2em;
+			}
 		}
 	}
+}
+
+.relative{
+	position: relative;
 }

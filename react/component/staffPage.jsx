@@ -150,7 +150,7 @@ function studentFeedbackAnimation(){
 	var slideInUp = document.querySelectorAll('#staffPage .studentFeedback .slideInUpPre');
 	for(var i=0 ; i<slideInUp.length ; ++i){
 		slideInUp[i].className = slideInUp[i].className + 
-			" delay" + (i*3);
+			" delay" + (2+i*2);
 	}
 	for(var i=0 ; i<slideInUp.length ; ++i)
 		slideInUp[i].className = slideInUp[i].className + " slideInUp";

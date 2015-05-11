@@ -10,7 +10,7 @@ var TimetableCol = React.createClass({
 			applyClass += " "+this.props.content.type;
 		if( this.props.content.l )
 			return (
-				<td className={applyClass}
+				<td className={applyClass+" link"}
 					rowSpan={this.props.content.r}
 					colSpan={this.props.content.c}
 					onClick={this.handleClick}>
