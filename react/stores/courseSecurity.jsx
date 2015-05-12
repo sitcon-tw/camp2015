@@ -3,7 +3,11 @@ var React = require('react');
 
 var CourseSecurity = (
 	<div className="courseContent">
-		<h2 className="title">Security</h2>
+		<h2 className="title">任務小技巧</h2>
+		<div className="infoRow">
+			<h2>課程主題</h2>
+			<p>Security（資安）</p>
+		</div>
 		<div className="infoRow">
 			<h2>課程講師</h2>
 			<p>HrJ</p>

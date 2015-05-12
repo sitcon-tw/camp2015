@@ -30,6 +30,22 @@ $colNum: 5;
 				margin-right: auto;
 			}
 		}
+		.claimDate{
+			width: 6em;
+			text-align: center;
+			text-indent: 0;
+			margin-top: 1em;
+			margin-left: auto;
+			margin-right: auto;
+			padding: .5em 1em;
+			border: 1px solid $darkGray;
+			opacity: .5;
+			p{
+				line-height: 1.4em;
+				width: 100%;
+				text-align: center;
+			}
+		}
 	}
 	.row{
 		display: block;

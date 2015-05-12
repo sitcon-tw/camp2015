@@ -3,7 +3,11 @@ var React = require('react');
 
 var CourseWeb = (
 	<div className="courseContent">
-		<h2 className="title">社群精神</h2>
+		<h2 className="title">來自友邦的邀請信</h2>
+		<div className="infoRow">
+			<h2>課程主題</h2>
+			<p>社群精神</p>
+		</div>
 		<div className="infoRow">
 			<h2>課程講師</h2>
 			<p>Bob</p>

@@ -9,35 +9,34 @@ var timetableContent = [
 	],
 	[
 		{t:["08:30","~","09:30"]},
-		{t:["開始報到"],type:"easy"},
-		{t:["WEB"],type:"course",r:3,l:"web"},
-		{t:["WEB"],type:"course",r:3,l:"web"},
-		{t:["視界咖啡館"],type:"activity",r:3}
+		{t:["遊戲登入"],type:"easy"},
+		{t:["傳說中的訓練課程（上）"],type:"course",r:3,l:"web"},
+		{t:["傳說中的訓練課程（下）"],type:"course",r:3,l:"web"},
+		{t:["轉職說明"],type:"activity",r:3}
 	],
 	[
 		{t:["09:30","~","10:30"]},
-		{t:["開幕式"],type:"easy"}
+		{t:["新手教程"],type:"easy"}
 	],
 	[
 		{t:["10:30","~","12:00"]},
-		{t:["小隊破冰"],type:"activity"}
+		{t:["角色設定"],type:"activity"}
 	],
 	[
 		{t:["12:00","~","13:30"]},
-		{t:["小惡魔信箱","午餐"],c:3,type:"easy"},
-		{t:["午餐"],type:"easy"}
+		{t:["小惡魔信箱"],c:4,type:"easy"}
 	],
 	[
 		{t:["13:30","~","14:30"]},
-		{t:["Git"],type:"course",r:3,l:"git"},
-		{t:["社群精神"],type:"course",l:"community"},
-		{t:["Security（資安）"],type:"course",r:3,l:"security"},
-		{t:["社群闖關"],type:"activity"}
+		{t:["消失的歷史"],type:"course",r:3,l:"git"},
+		{t:["來自友邦的邀請信"],type:"course",l:"community"},
+		{t:["任務小技巧"],type:"course",r:3,l:"security"},
+		{t:["決戰時刻"],type:"activity"}
 	],
 	[
 		{t:["14:30","~","15:30"]},
-		{t:["SITCON 故事館"],type:"course"},
-		{t:["hackathon發表","故事時間"],type:"activity",r:2}
+		{t:["建立在名為信任的橋樑"],type:"course"},
+		{t:["終焉之時"],type:"activity",r:2}
 	],
 	[
 		{t:["15:30","~","17:00"]},
@@ -45,14 +44,15 @@ var timetableContent = [
 	],
 	[
 		{t:["17:00","~","18:30"]},
-		{t:["小惡魔信箱","晚餐"],c:3,type:"easy"},
-		{t:["閉幕","賦歸"],type:"easy"}
+		{t:["小惡魔信箱"],c:3,type:"easy"},
+		{t:["最後的道別"],type:"easy"}
 	],
 	[
 		{t:["18:00","~","21:00"]},
-		{t:["夜教"],type:"activity",c:2},
-		{t:["Hackathon"],type:"activity"},
-		{t:[" "],type:"easy",r:2}
+		{t:["革命軍的序幕"],type:"activity"},
+		{t:["與各邦的聯合晚宴"],type:"activity"},
+		{t:["轉職！前置任務"],type:"activity"},
+		{t:["勇者。再會"],type:"easy",r:2}
 	],
 	[
 		{t:["21:00","~","22:00"]},

@@ -46,6 +46,10 @@ var EnrollPage = React.createClass({
 						<div className="tmpContent">
 							<strong>{tmpContent[0]}</strong>
 							<strong>{tmpContent[1]}</strong>
+							<strong className="claimDate">
+								<p>公告錄取</p>
+								<p>06 . 10</p>
+							</strong>
 						</div>
 						<img className="girl" src={"img/girl.png"} />
 					</div>

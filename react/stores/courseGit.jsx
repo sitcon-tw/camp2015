@@ -3,7 +3,11 @@ var React = require('react');
 
 var CourseGit = (
 	<div className="courseContent">
-		<h2 className="title">Git</h2>
+		<h2 className="title">消失的歷史</h2>
+		<div className="infoRow">
+			<h2>課程主題</h2>
+			<p>Git</p>
+		</div>
 		<div className="infoRow">
 			<h2>課程講師</h2>
 			<p>Denny Huang</p>
