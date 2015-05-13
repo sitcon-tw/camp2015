@@ -6,7 +6,7 @@ var CourseSecurity = (
 		<h2 className="title">任務小技巧</h2>
 		<div className="infoRow">
 			<h2>課程主題</h2>
-			<p>Security（資安）</p>
+			<p>Security</p>
 		</div>
 		<div className="infoRow">
 			<h2>課程講師</h2>

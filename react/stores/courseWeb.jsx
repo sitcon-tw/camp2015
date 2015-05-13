@@ -6,7 +6,7 @@ var CourseWeb = (
 		<h2 className="title">傳說中的訓練課程</h2>
 		<div className="infoRow">
 			<h2>課程主題</h2>
-			<p>WEB</p>
+			<p>Web</p>
 		</div>
 		<div className="infoRow">
 			<h2>課程講師</h2>

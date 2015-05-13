@@ -10,8 +10,8 @@ var timetableContent = [
 	[
 		{t:["08:30","~","09:30"]},
 		{t:["遊戲登入"],type:"easy"},
-		{t:["傳說中的訓練課程（上）","WEB","林大中"],type:"course",r:3,l:"web"},
-		{t:["傳說中的訓練課程（下）","WEB","林大中"],type:"course",r:3,l:"web"},
+		{t:["傳說中的訓練課程（上）","Web","林大中"],type:"course",r:3,l:"web"},
+		{t:["傳說中的訓練課程（下）","Web","林大中"],type:"course",r:3,l:"web"},
 		{t:["轉職說明","視界咖啡館"],type:"activity",r:3}
 	],
 	[
@@ -29,14 +29,14 @@ var timetableContent = [
 	[
 		{t:["13:30","~","14:30"]},
 		{t:["消失的歷史","Git","Denny Huang"],type:"course",r:3,l:"git"},
-		{t:["來自友邦的邀請信","社群精神","Bob"],type:"course",l:"community"},
-		{t:["任務小技巧","Security（資安）","HrJ"],type:"course",r:3,l:"security"},
+		{t:["來自友邦的邀請信","開源社群精神","Bob"],type:"course",l:"community"},
+		{t:["任務小技巧","Security","HrJ"],type:"course",r:3,l:"security"},
 		{t:["決戰時刻"],type:"activity"}
 	],
 	[
 		{t:["14:30","~","15:30"]},
-		{t:["建立在名為信任的橋樑","SITCON故事館"],type:"course"},
-		{t:["終焉之時","hackathon發表"],type:"activity",r:2}
+		{t:["建立在名為信任的橋樑","SITCON 故事館"],type:"course"},
+		{t:["終焉之時","Hackathon 發表"],type:"activity",r:2}
 	],
 	[
 		{t:["15:30","~","17:00"]},

@@ -6,7 +6,7 @@ var CourseWeb = (
 		<h2 className="title">來自友邦的邀請信</h2>
 		<div className="infoRow">
 			<h2>課程主題</h2>
-			<p>社群精神</p>
+			<p>開源社群精神</p>
 		</div>
 		<div className="infoRow">
 			<h2>課程講師</h2>
