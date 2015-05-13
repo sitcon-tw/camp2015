@@ -17,6 +17,7 @@
 	}
 	p{
 		@include fontArticle();
+		text-align: justify;
 	}
 	h2{
 		@include fontSmalltitle(); 

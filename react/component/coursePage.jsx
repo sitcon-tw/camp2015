@@ -63,13 +63,17 @@ var timetableContent = [
 var React = require('react');
 var CourseStore = require('../stores/courseStore.jsx');
 var Timetable = require('../partial/timetable.jsx');
+var CourseFeature = require('./courseFeature.jsx');
 
 var CoursePage = React.createClass({
 	render: function(){
 		return (
 			<div className="coursePage pageContainer">
 				<h2>課 程</h2>
-				<Timetable content={timetableContent} />
+				<div className="tableContainer">
+					<Timetable content={timetableContent} />
+				</div>
+				<CourseFeature />
 			</div>
 		);
 	}
@@ -81,7 +85,7 @@ React.render(
 );
 
 
-
+/* below is course's info panel */
 
 function getCoursePanelState(){
 	return {
