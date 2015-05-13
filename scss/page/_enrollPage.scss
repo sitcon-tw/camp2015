@@ -39,7 +39,8 @@ $colNum: 5;
 			margin-right: auto;
 			padding: .5em 1em;
 			border: 1px solid $darkGray;
-			opacity: .5;
+			opacity: .8;
+			box-shadow: 0 0 2px $darkGray;
 			p{
 				line-height: 1.4em;
 				width: 100%;
