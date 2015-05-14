@@ -35,7 +35,7 @@ var timetableContent = [
 	],
 	[
 		{t:["14:30","~","15:30"]},
-		{t:["建立在名為信任的橋樑","SITCON 故事館"],type:"course"},
+		{t:["建立在名為信任的橋樑","SITCON 故事館"],type:"course",l:"story"},
 		{t:["終焉之時","Hackathon 發表"],type:"activity",r:2}
 	],
 	[

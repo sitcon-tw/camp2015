@@ -10,7 +10,7 @@ var staffTaChi = [
 		"行銷組" , "小燁、Mouse、蝦子"
 	],
 	[
-		"活動組" , "莫風、味噌、泰泰、Queenie、糖萱、PCC"
+		"活動組" , "莫風、味噌、泰泰、Queenie、PCC"
 	],
 	[
 		"隊輔組" , "JefferySAC"

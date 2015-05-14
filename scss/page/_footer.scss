@@ -17,22 +17,52 @@
 		font-size: 14px;
 		margin-top: 1em;
 		text-align: center;
-		padding-left: .5em;
-		padding-right: .5em;
 
 		a{
 			text-decoration: none;
 			display: inline-block;
-			padding: .3em 1em;
-			border: 1px #666 solid;
-			margin-left: 1em;
 			margin-right: 1em;
-			transition: box-shadow 300ms linear;
-			margin-top: 1em;
 
-			&:hover{
-				box-shadow: 0 0 10px #333 inset;
+			img{
+				height: 24px;
 			}
+		}
+	}
+
+	.otherSay{
+		max-width: 400px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 2em;
+		position: relative;
+		line-height: 1.3em;
+		font-size: 1em;
+		color: #7F7F7F;
+		&:first-child{
+			margin-top: 6em;
+		}
+
+		p{
+			text-align: justify;
+			&:before{
+			  content: "\201C";
+			  font-size: 3em;
+			  position: absolute;
+			  top: -.1em;
+			  left: -.5em;
+			  vertical-align: top;
+			}
+		}
+		a{
+			display: block;
+			text-align: right;
+			padding-left: 1em;
+			text-decoration: none;
+			font-size: .8em;
+			cursor: alias;
+		}
+		.whosay{
+			text-align: right;
 		}
 	}
 }

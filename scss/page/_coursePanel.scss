@@ -43,6 +43,10 @@
 			@include fontArticle();
 			line-height: 1.5em;
 			text-indent: 2em;
+			&.multiName{
+				text-indent: 1em;
+				font-weight: 900;
+			}
 		}
 
 		.panelCover{
@@ -114,6 +118,10 @@
 				margin-top: 2em;
 			}
 		}
+	}
+	.hr{
+		display: block;
+		padding-top: 2em;
 	}
 }
 

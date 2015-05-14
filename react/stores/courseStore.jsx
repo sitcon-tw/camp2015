@@ -9,7 +9,8 @@ var courses = {
 	git: require('./courseGit.jsx'),
 	web: require('./courseWeb.jsx'),
 	community: require('./courseCommunity.jsx'),
-	security: require('./courseSecurity.jsx')
+	security: require('./courseSecurity.jsx'),
+	story: require('./courseStory.jsx')
 };
 var modeShow = false;
 var nowWhich = "web";

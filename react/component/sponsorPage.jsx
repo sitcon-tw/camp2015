@@ -1,11 +1,14 @@
 
 var partIn = [
 	{group:"主辦單位",applyClass:"mainPart",parts:[
-		{name:"學生計算機年會",logo:"sitconLogo.png"}
+		{name:"學生計算機年會",logo:"sitconLogo.png",url:"http://sitcon.org/"}
 	]},
 	{group:"共同主辦",applyClass:"secondPart",parts:[
 		{name:"開放文化基金會",logo:"OCFLogo.png",url:"http://ocf.tw/"},
 		{name:"聖約翰科技大學",logo:"SJULogo.png",url:"http://www.sju.edu.tw/"}
+	]},
+	{group:"特別感謝",applyClass:"thirdPart",parts:[
+		{name:"Dcard",logo:"Dcard.png",url:"https://www.dcard.tw/"}
 	]}/*,
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
 	]},
