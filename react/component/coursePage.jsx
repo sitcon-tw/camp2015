@@ -36,7 +36,7 @@ var timetableContent = [
 	[
 		{t:["14:30","~","15:30"]},
 		{t:["建立在名為信任的橋樑","SITCON 故事館"],type:"course",l:"story"},
-		{t:["終焉之時","Hackathon 發表"],type:"activity",r:2}
+		{t:["終焉之時"],type:"activity",r:2}
 	],
 	[
 		{t:["15:30","~","17:00"]},
@@ -51,7 +51,7 @@ var timetableContent = [
 		{t:["18:00","~","21:00"]},
 		{t:["革命軍的序幕"],type:"activity"},
 		{t:["與各邦的聯合晚宴"],type:"activity"},
-		{t:["轉職！前置任務"," Hackathon"],type:"activity"},
+		{t:["最終的試煉"],type:"activity"},
 		{t:["勇者。再會"],type:"easy",r:2}
 	],
 	[
