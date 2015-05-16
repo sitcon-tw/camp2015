@@ -24,6 +24,12 @@ var paywayParagraphs = [
 		<span class='right'>\
 			2015 . 05 . 30\
 		</span>",
+	"$ <span class='left'>\
+			報名簡章\
+		</span>\
+		<span class='right'>\
+			2015 . 05 . 30\
+		</span>",
 	" ",
 	"$ 本次營隊報名採用KKTIX <a id='linkDetailProc' target='_blank' href='http://sitcon.camp/2015/data/SITCONCamp2015takePartIn.pdf'>詳細報名流程</a>",
 	"$ <div class='registBlock'>\
@@ -42,6 +48,7 @@ var paywayParagraphs = [
 			<li>正取學員之邀請碼不得轉讓他人使用。</li>\
 			<li>繳費後方為完成報名程序，正取學員需於公告名單後幾日完成報名，逾期名額將釋放給候補學員。</li>\
 			<li>後續通知及行前注意事項均將透過學員填寫之電子信箱聯繫，請務必保持收信以免影響個人權益。</li>\
+			<li>可以在此下在<a  href='http://sitcon.camp/2015/data/SITCONCamp2015.pdf' target='_blank'>報名簡章</a></li>\
 			<li>任何相關問題請寄信至 <a href='mailto:ask@sitcon.camp'>ask@sitcon.camp</a> ，我們將盡快與您連絡。</li>\
 		</ol>"
 ];
