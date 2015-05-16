@@ -173,7 +173,7 @@
 		.partInName{
 			@include fontArticle();
 			position: absolute;
-			right: -.5em;
+			right: -1.8em;
 			bottom: -.7em;
 			color: $smokeWhite;
 			overflow: hidden;
@@ -182,10 +182,10 @@
 				position: relative;
 				z-index: 100;
 				display: block;
-				padding-top: .5em;
+				padding-top: .2em;
 				padding-bottom: .2em;
-				padding-right: 1.3em;
-				padding-left: 3em;
+				padding-right: .8em;
+				padding-left: 1.5em;
 				@include fontArticle();
 			}
 			.partInNameBg{
