@@ -10,7 +10,9 @@ var paywayParagraphs = [
 			補助辦法\
 		</span>\
 		<span class='right'>\
-			<a id='linkHelpFinancial' target='_blank' href='http://sitcon.camp/2015/data/SITCONCamp2015helpFinanial.pdf'>報名費用補助辦法</a>\
+			<a id='linkHelpFinancial' target='_blank' href='http://sitcon.camp/2015/data/SITCONCamp2015helpFinanial.pdf'>\
+				報名費用補助辦法\
+			</a>\
 		</span>",
 	"$ <span class='left'>\
 			開放報名\
