@@ -26,12 +26,6 @@ var paywayParagraphs = [
 		<span class='right'>\
 			2015 . 05 . 30\
 		</span>",
-	"$ <span class='left'>\
-			報名簡章\
-		</span>\
-		<span class='right'>\
-			2015 . 05 . 30\
-		</span>",
 	" ",
 	"$ 本次營隊報名採用KKTIX <a id='linkDetailProc' target='_blank' href='http://sitcon.camp/2015/data/SITCONCamp2015takePartIn.pdf'>詳細報名流程</a>",
 	"$ <div class='registBlock'>\
