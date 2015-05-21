@@ -12,7 +12,7 @@ var timetableContent = [
 		{t:["遊戲登入"],type:"easy"},
 		{t:["傳說中的訓練課程（上）","Web","林大中"],type:"course",r:3,l:"web"},
 		{t:["傳說中的訓練課程（下）","Web","林大中"],type:"course",r:3,l:"web"},
-		{t:["轉職說明","視界咖啡館"],type:"activity",r:3}
+		{t:["0900 ~ 1100","轉職說明","視界咖啡館"],type:"activity",r:3}
 	],
 	[
 		{t:["09:30","~","10:30"]},
@@ -31,12 +31,12 @@ var timetableContent = [
 		{t:["消失的歷史","Git","Denny Huang"],type:"course",r:3,l:"git"},
 		{t:["來自友邦的邀請信","開源社群精神","Bob"],type:"course",l:"community"},
 		{t:["任務小技巧","Security","HrJ"],type:"course",r:3,l:"security"},
-		{t:["決戰時刻"],type:"activity"}
+		{t:["1230 ~ 1500","決戰時刻"],type:"activity"}
 	],
 	[
 		{t:["14:30","~","15:30"]},
 		{t:["建立在名為信任的橋樑","SITCON 故事館"],type:"course",l:"story"},
-		{t:["終焉之時"],type:"activity",r:2}
+		{t:["1500 ~ 1630","終焉之時"],type:"activity",r:2}
 	],
 	[
 		{t:["15:30","~","17:00"]},
@@ -45,14 +45,14 @@ var timetableContent = [
 	[
 		{t:["17:00","~","18:30"]},
 		{t:["小惡魔信箱"],c:3,type:"easy"},
-		{t:["最後的道別"],type:"easy"}
+		{t:["1630 ~ 1700","最後的道別"],type:"easy"}
 	],
 	[
 		{t:["18:00","~","21:00"]},
 		{t:["革命軍的序幕"],type:"activity"},
 		{t:["與各邦的聯合晚宴"],type:"activity"},
 		{t:["最終的試煉"],type:"activity"},
-		{t:["勇者。再會"],type:"easy",r:2}
+		{t:["1730 ~ 1830","勇者。再會"],type:"easy",r:2}
 	],
 	[
 		{t:["21:00","~","22:00"]},
