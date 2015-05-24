@@ -8,7 +8,8 @@ var partIn = [
 		{name:"開放文化基金會",logo:"OCFLogo.png",url:"http://ocf.tw/"}
 	]},
 	{group:"特別感謝",applyClass:"thirdPart",parts:[
-		{name:"Dcard",logo:"Dcard.png",url:"https://www.dcard.tw/"}
+		{name:"Dcard",logo:"Dcard.png",url:"https://www.dcard.tw/"},
+		{name:"CPRTeam",logo:"CPRTeam.png",url:"https://www.facebook.com/CPRTeam.TW"}
 	]}/*,
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
 	]},
