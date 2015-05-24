@@ -16,7 +16,7 @@ var CourseStory = (
 		<div className="infoRow">
 			<h2>講師介紹</h2>
 			<p className="multiName">姜柏任</p>
-			<p>來自台大法律系的 RSChiang 於 SITCON 2015 擔任副召，其亦是台大開源社的社長。因為對資訊科技的熱情，RSChiang 從小開始接觸程式語言和作業系統，但比起鑽研高深莫測的理論，他更喜歡把資訊科技應用到生活中，以此改變生活中不便利的地方。 CSS 與 JavaScript，就能簡易的設計出腦中所構思的畫面，並同時與第三方平台的資料做交流，呈現出與眾不凡的作品。</p>
+			<p>來自台大法律系的 RSChiang 於 SITCON 2015 擔任副召，其亦是台大開源社的社長。因為對資訊科技的熱情，RSChiang 從小開始接觸程式語言和作業系統，但比起鑽研高深莫測的理論，他更喜歡把資訊科技應用到生活中，以此改變生活中不便利的地方。</p>
 			<p className="hr"></p>
 			<p className="multiName">廖偉涵</p>
 			<p>還是國中生的 Adrian 在參與 SITCON 前便活躍於 Taipei.py ，他也在今年五月底舉辦的 PyCon Tutorial 擔任講者，靠著自學與社群的前輩，使他十分熟悉 Python 程式語言。讓我們來聽聽社群的世界在他的眼中是什麼樣子呢？</p>
