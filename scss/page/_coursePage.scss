@@ -54,9 +54,6 @@
 			&.course{
 				color: $lightBlue;
 
-				&:hover{
-					background-color: #222;
-				}
 				p:nth-child(2):before{
 					content: " ";
 					display: inline-block;
@@ -80,13 +77,12 @@
 			}
 			&.activity{
 				color: $darkYellow;
-
+			}
+			&.link{
+				cursor: url(img/talk.png) 12 12, alias;
 				&:hover{
 					background-color: #222;
 				}
-			}
-			&.link{
-				cursor: url(img/link.png) 10 10, alias;
 			}
 			&.easy{
 				background-color: $darkGray;
