@@ -13,9 +13,6 @@ var staffTaChi = [
 		"活動組" , "莫風、味噌、泰泰、Queenie、PCC"
 	],
 	[
-		"隊輔組" , "JefferySAC"
-	],
-	[
 		"財務組" , "蛋糕、魚丸"
 	],
 	[
@@ -26,6 +23,15 @@ var staffTaChi = [
 	],
 	[
 		"美生組" , "阿貓、拔辣"
+	],
+	[
+		"隊輔組" , "JefferySAC、Emma、Beauty、小米、阿哲"
+	],
+	[
+		" " , "小寒、球球、芥龍、葉子、子期、Jeffrey Lin、YW"
+	],
+	[
+		" " , "悅悅、虎胡、寶寶、拉布、Choukai、cristine、ADR"
 	]
 ];
 
