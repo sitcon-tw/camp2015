@@ -70,4 +70,17 @@
 			text-align: center;
 		}
 	}
+
+	.coc{
+		margin-top: 6em;
+		ul{
+			@include fontArticle();
+			padding-left: 2em;
+			margin-top: 1em;
+			margin-bottom: 1em;
+			li{
+				list-style-type: none;
+			}
+		}
+	}
 }
