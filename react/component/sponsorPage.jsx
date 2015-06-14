@@ -10,6 +10,9 @@ var partIn = [
 	{group:"特別感謝",applyClass:"thirdPart",parts:[
 		{name:"Dcard",logo:"Dcard.png",url:"https://www.dcard.tw/"},
 		{name:"CPRTeam",logo:"CPRTeam.png",url:"https://www.facebook.com/CPRTeam.TW"}
+	]},
+	{group:"Bronze",applyClass:"forthPart",parts:[
+		{name:"資策會彩虹牧場",logo:"rainbow.png",url:"http://rainbow.iiiedu.org.tw/"}
 	]}/*,
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
 	]},
