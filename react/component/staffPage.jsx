@@ -31,7 +31,7 @@ var staffTaChi = [
 		" " , "小寒、球球、芥龍、葉子、子期、Jeffrey Lin、YW"
 	],
 	[
-		" " , "悅悅、虎胡、寶寶、拉布、Choukai、cristine、ADR"
+		" " , "悅悅、虎胡、寶寶、拉布、Choukai、克莉絲汀、ADR"
 	]
 ];
 
