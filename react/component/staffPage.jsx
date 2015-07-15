@@ -25,6 +25,9 @@ var staffTaChi = [
 		"美生組" , "阿貓、拔辣"
 	],
 	[
+		"紀錄組" , " 百香、Falcon"
+	],
+	[
 		"隊輔組" , "JefferySAC、Emma、Beauty、小米、阿哲"
 	],
 	[
