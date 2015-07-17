@@ -5,15 +5,20 @@ var partIn = [
 	]},
 	{group:"共同主辦",applyClass:"secondPart",parts:[
 		{name:"聖約翰科技大學",logo:"SJULogo.png",url:"http://www.sju.edu.tw/"},
-		{name:"開放文化基金會",logo:"OCFLogo.png",url:"http://ocf.tw/"}
+		{name:"開放文化基金會",logo:"OCFLogo.png",url:"http://ocf.tw/"},
+		{name:"中研院・資創中心・自由軟體鑄造場",logo:"ossf.png",url:"http://www.openfoundry.org/"}
+	]},
+	{group:"協辦單位",applyClass:"mainAssistPart",parts:[
+		{name:"國立政治大學-ITSA社群運算與巨量資料跨校資源中心",
+		 logo:"ITSA.png",url:"http://lrs.itsa.org.tw/course/view.php?id=585"}
+	]},
+	{group:"Bronze",applyClass:"forthPart",parts:[
+		{name:"資策會彩虹牧場",logo:"rainbow.png",url:"http://rainbow.iiiedu.org.tw/"}
 	]},
 	{group:"特別感謝",applyClass:"thirdPart",parts:[
 		{name:"Dcard",logo:"Dcard.png",url:"https://www.dcard.tw/"},
 		{name:"CPRTeam",logo:"CPRTeam.png",url:"https://www.facebook.com/CPRTeam.TW"},
 		{name:"數位時代",logo:"BNlogo.png",url:"http://www.bnext.com.tw/"}
-	]},
-	{group:"Bronze",applyClass:"forthPart",parts:[
-		{name:"資策會彩虹牧場",logo:"rainbow.png",url:"http://rainbow.iiiedu.org.tw/"}
 	]}/*,
 	{group:"媒體夥伴",applyClass:"mediaPart",parts:[
 	]},
