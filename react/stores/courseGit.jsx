@@ -22,7 +22,7 @@ var CourseGit = (
 		</div>
 		<div className="infoRow">
 			<h2>課程投影片</h2>
-			<p><a href="http://denny0223.github.io/SITCON-Camp-2015-git/" target="_blank">Slide</a></p>
+			<p><a href="http://denny.one/SITCON-Camp-2015-git/" target="_blank">Slide</a></p>
 		</div>
 	</div>
 );
