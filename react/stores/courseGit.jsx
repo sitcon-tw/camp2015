@@ -20,6 +20,10 @@ var CourseGit = (
 			<h2>課程介紹</h2>
 			<p>軟體研發中如果有養成良好的版本控制對於事後的維護以及升級是十分重要的，Git 是目前使用最廣泛的版本控制系統，本課程中將帶領大家瞭解版本控制的美好以及讓一個完全不會 Git 的新手也能理解 Git 的精髓。</p>
 		</div>
+		<div className="infoRow">
+			<h2>課程投影片</h2>
+			<p><a href="http://denny.one/SITCON-Camp-2015-git/" target="_blank">Slide</a></p>
+		</div>
 	</div>
 );
 
